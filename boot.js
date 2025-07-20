@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let i = 0;
   const printLine = () => {
     if (i < lines.length) {
-      bootText.textContent += lines[i++] + "\n";
-      setTimeout(printLine, 800);
+      bootText.textContent += lines[i++] + "\\n";
+      setTimeout(printLine, 700);
     } else {
       document.getElementById("boot-sequence").style.display = "none";
       interface.classList.remove("hidden");

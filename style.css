@@ -2,14 +2,16 @@ body {
   background-color: #000;
   font-family: 'Courier New', monospace;
   padding: 20px;
+  margin: 0;
 }
 .pipboy {
   border: 2px solid currentColor;
   padding: 20px;
   max-width: 800px;
   margin: auto;
-  background-color: #010101;
-  box-shadow: 0 0 20px currentColor;
+  background-color: rgba(1, 1, 1, 0.95);
+  box-shadow: 0 0 25px currentColor;
+  transition: all 0.3s ease;
 }
 a {
   color: currentColor;
@@ -32,7 +34,19 @@ h1, h2 {
 .tema-selector {
   margin-top: 20px;
 }
-.verde { color: #00ff00; }
-.naranja { color: #ffaa00; }
-.azul { color: #00ffff; }
-.hidden { display: none; }
+.verde {
+  color: #00ff00;
+  background-color: #001100;
+}
+.naranja {
+  color: #ffaa00;
+  background-color: #1f1400;
+}
+.azul {
+  color: #00ffff;
+  background-color: #001a1a;
+}
+.hidden {
+  display: none;
+}
+

@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Consola</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>💻 Consola PIP-BOY</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="theme.js" defer></script>
 </head>
 <body>
   <div class="pipboy">
     <h1>💻 Consola PIP-BOY</h1>
-    <pre>> help
-Vault Status: SECURE
-Radiation Level: NOMINAL
-Next Mission: Awaiting Command</pre>
-    <a href="index.html">← Volver</a>
+    <p>Simulador de comandos retro (en desarrollo)</p>
+    <pre>
+> status
+> scan modules
+> check security
+> vault-access --code 101
+    </pre>
+    <a href="index.html">← Volver al inicio</a>
+    <div class="tema-selector">
+      <label>🎨 Tema:</label>
+      <button onclick="setTheme('verde')">Verde</button>
+      <button onclick="setTheme('naranja')">Naranja</button>
+      <button onclick="setTheme('azul')">Azul</button>
+    </div>
   </div>
 </body>
 </html>
