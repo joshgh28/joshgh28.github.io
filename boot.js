@@ -7,15 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "→ INIT MEMORY... OK",
     "→ LOAD MODULES... OK",
     "→ USER DETECTED: JOSÉ MANUEL",
-    "→ RETRIEVING USER FILES...",
-    "→ SYSTEM ONLINE",
-    "✔️ BIENVENIDO DE NUEVO, SUPERVIVIENTE"
+    "→ AUTHENTICATION: VERIFIED",
+    "→ NETWORK LINK: STABLE",
+    "→ LOADING SYSTEM PREFERENCES",
+    "→ CPU STATUS: NOMINAL",
+    "→ RAM USAGE: 13%",
+    "→ HDD SCAN: NO THREATS DETECTED",
+    "→ LAUNCHING INTERFACE MODULES...",
+    "✔️ PIP-BOY ONLINE. BIENVENIDO, SUPERVIVIENTE."
   ];
   let i = 0;
   const printLine = () => {
     if (i < lines.length) {
-      bootText.textContent += lines[i++] + "\n";
-      setTimeout(printLine, 600);
+      bootText.textContent += lines[i++] + "\\n";
+      setTimeout(printLine, 200); // velocidad más rápida
     } else {
       bootText.innerHTML += "<span class='cursor'>█</span>";
       document.getElementById("boot-sequence").remove();
