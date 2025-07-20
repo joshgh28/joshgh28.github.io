@@ -1,22 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
   const bootText = document.getElementById("boot-text");
-  const interface = document.getElementById("main-interface");
+  const shell = document.getElementById("main-shell");
   const lines = [
-    "BOOT SEQUENCE: PIP-BOY 3000 INITIATED",
-    "USER: José Manuel González Hidalgo",
-    "LOADING SYSTEM MODULES...",
-    "LOADING PERSONAL DATA...",
-    "WELCOME BACK, JOSÉ MANUEL"
+    "📡 PIP-BOY 3000 SYSTEM CHECK",
+    "→ BIOS VERSION: 1.0.14",
+    "→ INIT MEMORY... OK",
+    "→ LOAD MODULES... OK",
+    "→ USER DETECTED: JOSÉ MANUEL",
+    "→ RETRIEVING USER FILES...",
+    "→ SYSTEM ONLINE",
+    "✔️ BIENVENIDO DE NUEVO, SUPERVIVIENTE"
   ];
   let i = 0;
   const printLine = () => {
     if (i < lines.length) {
       bootText.textContent += lines[i++] + "\\n";
-      setTimeout(printLine, 700);
+      setTimeout(printLine, 600);
     } else {
-      document.getElementById("boot-sequence").style.display = "none";
-      interface.classList.remove("hidden");
+      document.getElementById("boot-sequence").remove();
+      shell.classList.remove("hidden");
     }
   };
   printLine();
 });
+
