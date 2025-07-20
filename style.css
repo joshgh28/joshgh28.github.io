@@ -3,6 +3,8 @@ body {
   color: #00ff00;
   font-family: 'Courier New', monospace;
   padding: 20px;
+  text-shadow: 0 0 5px #00ff00;
+  animation: flicker 1.5s infinite alternate;
 }
 
 .pipboy {
@@ -12,6 +14,7 @@ body {
   margin: auto;
   background-color: #010101;
   box-shadow: 0 0 20px #00ff00;
+  animation: scanlines 10s linear infinite;
 }
 
 a {
@@ -35,4 +38,34 @@ nav li {
 h1, h2 {
   border-bottom: 1px solid #00ff00;
   padding-bottom: 5px;
+}
+
+/* Texto animado */
+.subtitle {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #00ff00;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff00 }
+}
+
+/* Parpadeo general */
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.95; }
+}
+
+/* Líneas tipo CRT */
+@keyframes scanlines {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
 }

@@ -50,5 +50,17 @@
       <p>📍 Ubicación: Málaga, España</p>
     </section>
   </div>
+
+<audio id="pipclick" src="https://www.myinstants.com/media/sounds/pip-boy-button.mp3"></audio>
+<script>
+  document.querySelectorAll('a').forEach(el => {
+    el.addEventListener('click', () => {
+      const pip = document.getElementById('pipclick');
+      pip.currentTime = 0;
+      pip.play();
+    });
+  });
+</script>
+
 </body>
 </html>
