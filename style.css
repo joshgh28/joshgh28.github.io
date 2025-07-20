@@ -116,3 +116,50 @@ body.verde .crt::before {
   z-index: 4;
   pointer-events: none;
 }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pipboy-frame {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pipboy-side {
+  width: 100px;
+  background-color: rgba(0, 255, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-right: 2px solid currentColor;
+}
+
+.pipboy-dial {
+  width: 60px;
+  height: 60px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.pipboy-buttons .button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  margin: 10px 0;
+  background-color: rgba(0,255,0,0.2);
+}
+
+.pipboy-main {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
