@@ -4,38 +4,38 @@
   <meta charset="UTF-8" />
   <title>🔧 Iniciando PIP-BOY 3000</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <script src="boot.js" defer></script>
   <script src="theme.js" defer></script>
 </head>
 <body class="verde">
-  <div id="boot-sequence">
-    <pre id="boot-text"></pre>
-  </div>
-
-  <div class="pipboy-shell hidden" id="main-shell">
-    <div class="pipboy">
-      <h1>📟 PIP-BOY 3000 - MENÚ PRINCIPAL</h1>
-      <nav>
-        <ul>
-          <li><a href="educacion.html" onclick="playBeep()">📘 Educación</a></li>
-          <li><a href="experiencia.html" onclick="playBeep()">📂 Experiencia</a></li>
-          <li><a href="habilidades.html" onclick="playBeep()">🛠 Habilidades</a></li>
-          <li><a href="perfil.html" onclick="playBeep()">🌐 Perfil</a></li>
-          <li><a href="proyectos.html" onclick="playBeep()">🧪 Proyectos</a></li>
-          <li><a href="consola.html" onclick="playBeep()">💻 Consola</a></li>
-        </ul>
-      </nav>
-
-      <div class="tema-selector">
-        <label>🎨 Tema: </label>
-        <button onclick="setTheme('verde'); playBeep()">Verde</button>
-        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
-        <button onclick="setTheme('azul'); playBeep()">Azul</button>
+  <div class="crt">
+    <div id="boot-sequence">
+      <pre id="boot-text" class="blink"></pre>
+    </div>
+    <div class="pipboy-shell hidden" id="main-shell">
+      <div class="pipboy">
+        <h1>📟 PIP-BOY 3000 - MENÚ PRINCIPAL</h1>
+        <nav>
+          <ul>
+            <li><a href="educacion.html" onclick="playBeep()">📘 Educación</a></li>
+            <li><a href="experiencia.html" onclick="playBeep()">📂 Experiencia</a></li>
+            <li><a href="habilidades.html" onclick="playBeep()">🛠 Habilidades</a></li>
+            <li><a href="perfil.html" onclick="playBeep()">🌐 Perfil</a></li>
+            <li><a href="proyectos.html" onclick="playBeep()">🧪 Proyectos</a></li>
+            <li><a href="consola.html" onclick="playBeep()">💻 Consola</a></li>
+          </ul>
+        </nav>
+        <div class="tema-selector">
+          <label>🎨 Tema: </label>
+          <button onclick="setTheme('verde'); playBeep()">Verde</button>
+          <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
+          <button onclick="setTheme('azul'); playBeep()">Azul</button>
+        </div>
       </div>
     </div>
+    <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3"></audio>
   </div>
-
-  <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3"></audio>
   <script>
     function playBeep() {
       const beep = document.getElementById('beep');
@@ -45,5 +45,3 @@
   </script>
 </body>
 </html>
-
-

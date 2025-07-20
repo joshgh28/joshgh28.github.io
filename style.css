@@ -1,6 +1,6 @@
 body {
   background-color: #000;
-  font-family: 'Courier New', monospace;
+  font-family: 'Share Tech Mono', monospace;
   padding: 20px;
   margin: 0;
 }
@@ -49,4 +49,41 @@ h1, h2 {
 .hidden {
   display: none;
 }
-
+.crt {
+  position: relative;
+  overflow: hidden;
+}
+.crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+body.verde .crt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 50px #00ff00;
+  pointer-events: none;
+  z-index: 6;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+.blink {
+  animation: blink 1s infinite;
+}
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+}

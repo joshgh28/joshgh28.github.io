@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let i = 0;
   const printLine = () => {
     if (i < lines.length) {
-      bootText.textContent += lines[i++] + "\\n";
+      bootText.textContent += lines[i++] + "\n";
       setTimeout(printLine, 600);
     } else {
+      bootText.innerHTML += "<span class='cursor'>█</span>";
       document.getElementById("boot-sequence").remove();
       shell.classList.remove("hidden");
     }
   };
   printLine();
 });
-
