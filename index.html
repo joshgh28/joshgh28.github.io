@@ -5,8 +5,9 @@
   <title>PIP-BOY 3000 - Inicio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="boot.js" defer></script>
+  <script src="theme.js" defer></script>
 </head>
-<body>
+<body class="verde">
   <div id="boot-sequence">
     <pre id="boot-text"></pre>
   </div>
@@ -14,14 +15,20 @@
     <h1>📟 PIP-BOY 3000</h1>
     <nav>
       <ul>
-        <li><a href="educacion.html">📘 Educación</a></li>
-        <li><a href="experiencia.html">📂 Experiencia</a></li>
-        <li><a href="habilidades.html">🛠 Habilidades</a></li>
-        <li><a href="perfil.html">🌐 Perfil</a></li>
-        <li><a href="consola.html">💻 Consola</a></li>
-		<li><a href="proyectos.html">🧪 Proyectos</a></li>
+        <li><a href="#">📘 Educación</a></li>
+        <li><a href="#">📂 Experiencia</a></li>
+        <li><a href="#">🛠 Habilidades</a></li>
+        <li><a href="#">🌐 Perfil</a></li>
+        <li><a href="#">🧪 Proyectos</a></li>
+        <li><a href="#">💻 Consola</a></li>
       </ul>
     </nav>
+    <div class="tema-selector">
+      <label>🎨 Tema: </label>
+      <button onclick="setTheme('verde')">Verde</button>
+      <button onclick="setTheme('naranja')">Naranja</button>
+      <button onclick="setTheme('azul')">Azul</button>
+    </div>
   </div>
 </body>
 </html>
