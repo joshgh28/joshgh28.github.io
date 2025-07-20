@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const bootText = document.getElementById("boot-text");
+  const text = document.getElementById("boot-text");
   const shell = document.getElementById("main-shell");
   const lines = [
-    "📡 PIP-BOY 3000 BOOTING...",
-    "→ BIOS VERSION: 1.0.14",
-    "→ SCANNING MEMORY... OK",
+    "📡 PIP‑BOY 3000 BOOT SEQUENCE",
+    "→ INIT BIOS... OK",
+    "→ LOAD MODULES... OK",
     "→ USER: JOSÉ MANUEL GONZÁLEZ HIDALGO",
-    "→ STATUS: VERIFIED",
-    "→ INITIALIZING INTERFACE...",
-    "✔️ BOOT COMPLETE. BIENVENIDO."
+    "→ INTERFACE ONLINE",
+    "✔️ MENU PRINCIPAL LISTO"
   ];
   let i = 0;
-  const printLine = () => {
+  const next = () => {
     if (i < lines.length) {
-      bootText.textContent += lines[i++] + "\n";
-      setTimeout(printLine, 200); // velocidad rápida
+      text.textContent += lines[i++] + "\n";
+      setTimeout(next, 200);
     } else {
       document.getElementById("boot-sequence").remove();
       shell.classList.remove("hidden");
     }
   };
-  printLine();
+  next();
 });
+
 

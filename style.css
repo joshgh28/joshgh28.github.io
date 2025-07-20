@@ -1,25 +1,71 @@
-body {
-  background-color: #000;
-  font-family: 'Share Tech Mono', monospace;
-  padding: 20px;
+/* Base y pantalla completa */
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background: #000;
+  overflow: hidden;
+  color: #0f0;
 }
-.pipboy {
-  border: 2px solid currentColor;
+
+/* CRT + scanlines + flicker */
+.crt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.05),
+    rgba(0,255,0,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0%,100%{opacity:1}
+  50%{opacity:0.95}
+}
+
+/* Parpadeo cursor */
+.blink {animation: blink 0.6s step-end infinite}
+@keyframes blink {50% {opacity:0}}
+
+/* Marco estilo Pip‑Boy: lado + dial + botones */
+.pipboy-frame {
+  display: flex;
+  height: 100vh;
+}
+.pipboy-side {
+  width: 100px;
+  border-right: 3px solid currentColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.pipboy-dial {
+  width: 60px; height: 60px;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.button {
+  width: 20px; height: 20px;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  margin: 8px 0;
+}
+
+/* Zona principal scroll + padding */
+.pipboy-main {
+  flex: 1;
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background-color: rgba(1, 1, 1, 0.95);
-  box-shadow: 0 0 25px currentColor;
-  transition: all 0.3s ease;
+  overflow-y: auto;
 }
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+
+/* Menú y enlaces */
 nav ul {
   list-style: none;
   padding: 0;
@@ -27,139 +73,34 @@ nav ul {
 nav li {
   margin: 10px 0;
 }
-h1, h2 {
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 5px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.tema-selector {
-  margin-top: 20px;
-}
-.verde {
-  color: #00ff00;
-  background-color: #001100;
-}
-.naranja {
-  color: #ffaa00;
-  background-color: #1f1400;
-}
-.azul {
-  color: #00ffff;
-  background-color: #001a1a;
-}
-.hidden {
-  display: none;
-}
-.crt {
-  position: relative;
-  overflow: hidden;
-}
-.crt::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 255, 0, 0.05),
-    rgba(0, 255, 0, 0.05) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  pointer-events: none;
-  z-index: 5;
-}
-body.verde .crt::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  box-shadow: inset 0 0 50px #00ff00;
-  pointer-events: none;
-  z-index: 6;
-}
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.1; }
-  100% { opacity: 1; }
-}
-.blink {
-  animation: blink 1s infinite;
-}
-.cursor {
-  display: inline-block;
-  animation: blink 0.8s infinite;
-}
-/* Efecto de glitch e interferencia retro */
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-  55% { opacity: 0.5; }
-  60% { opacity: 0.7; }
+a:hover {
+  text-decoration: underline;
 }
 
-.crt::after {
-  animation: flicker 0.15s infinite;
+/* Temas */
+.tema-selector {margin-top: 20px;}
+.tema-selector button {
+  margin-right: 8px;
+  padding: 4px 8px;
 }
 
-@keyframes scanline-shift {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 4px; }
+/* Cores para temas */
+.verde {--bg: #001100; --fg: #00ff00;}
+.naranja {--bg: #1f1000; --fg: #ffaa00;}
+.azul {--bg: #001a1a; --fg: #00ffff;}
+body {background: var(--bg); color: var(--fg);}
+
+/* Aplicar variables */
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+.nav-icon {
+  margin-right: 6px;
 }
 
-.crt::after {
-  animation: flicker 0.15s infinite, scanline-shift 0.3s infinite linear;
-}
 
-.crt::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0,255,0,0.1) 0%, transparent 80%);
-  z-index: 4;
-  pointer-events: none;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pipboy-frame {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.pipboy-side {
-  width: 100px;
-  background-color: rgba(0, 255, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-right: 2px solid currentColor;
-}
-
-.pipboy-dial {
-  width: 60px;
-  height: 60px;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.pipboy-buttons .button {
-  width: 20px;
-  height: 20px;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  margin: 10px 0;
-  background-color: rgba(0,255,0,0.2);
-}
-
-.pipboy-main {
-  flex-grow: 1;
-  padding: 20px;
-  overflow-y: auto;
-}

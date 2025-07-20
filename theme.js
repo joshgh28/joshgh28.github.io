@@ -2,8 +2,7 @@ function setTheme(theme) {
   document.body.className = theme;
   localStorage.setItem("theme", theme);
 }
-
 document.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("theme");
-  if (saved) setTheme(saved);
+  const t = localStorage.getItem("theme") || "verde";
+  setTheme(t);
 });
