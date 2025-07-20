@@ -1,8 +1,9 @@
 function setTheme(theme) {
   document.body.className = theme;
-  localStorage.setItem("pipboy-theme", theme);
+  localStorage.setItem("theme", theme);
 }
-window.onload = () => {
-  const saved = localStorage.getItem("pipboy-theme");
-  if (saved) document.body.className = saved;
-};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("theme");
+  if (saved) setTheme(saved);
+});
