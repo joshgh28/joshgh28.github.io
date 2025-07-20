@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PIP-BOY - José Manuel</title>
+  <title>PIP-BOY 3000 - José Manuel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -51,16 +51,15 @@
     </section>
   </div>
 
-<audio id="pipclick" src="https://www.myinstants.com/media/sounds/pip-boy-button.mp3"></audio>
-<script>
-  document.querySelectorAll('a').forEach(el => {
-    el.addEventListener('click', () => {
-      const pip = document.getElementById('pipclick');
-      pip.currentTime = 0;
-      pip.play();
+  <audio id="pipclick" src="https://www.myinstants.com/media/sounds/pip-boy-button.mp3"></audio>
+  <script>
+    document.querySelectorAll('a').forEach(el => {
+      el.addEventListener('click', () => {
+        const pip = document.getElementById('pipclick');
+        pip.currentTime = 0;
+        pip.play();
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>

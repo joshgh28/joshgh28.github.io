@@ -40,7 +40,6 @@ h1, h2 {
   padding-bottom: 5px;
 }
 
-/* Texto animado */
 .subtitle {
   overflow: hidden;
   white-space: nowrap;
@@ -58,13 +57,11 @@ h1, h2 {
   50% { border-color: #00ff00 }
 }
 
-/* Parpadeo general */
 @keyframes flicker {
   from { opacity: 1; }
   to { opacity: 0.95; }
 }
 
-/* Líneas tipo CRT */
 @keyframes scanlines {
   0% { background-position: 0 0; }
   100% { background-position: 0 100%; }
