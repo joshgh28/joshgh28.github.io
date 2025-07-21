@@ -6,28 +6,26 @@
   <link rel="stylesheet" href="style.css">
   <script src="theme.js" defer></script>
 </head>
-<body class="verde crt-lines">
-  <div class="pipboy-shell">
-    <div class="pipboy">
-      <div class="screen-border">
-        <div class="menu-tabs">
-          <a href="contacto.html" onclick="playBeep()">[CONTACTO]</a>
-          <a href="educacion.html" onclick="playBeep()">[EDUCACIÓN]</a>
-          <a href="habilidades.html" onclick="playBeep()">[HABILIDADES]</a>
-          <a href="experiencia.html" onclick="playBeep()">[EXPERIENCIA]</a>
-          <a href="certificaciones.html" onclick="playBeep()">[CERTIFICACIONES]</a>
-        </div>
-        <div class="vaultboy">
-          <img src="vaultboy.gif" alt="Vault Boy Animado" />
-        </div>
-        <h2>BIENVENIDO AL CV DE JOSÉ MANUEL</h2>
-        <p>Selecciona una pestaña para ver más detalles.</p>
-        <div class="tema-selector">
-          <label>🎨 TEMA: </label>
-          <button onclick="setTheme('verde'); playBeep()">VERDE</button>
-          <button onclick="setTheme('naranja'); playBeep()">NARANJA</button>
-          <button onclick="setTheme('azul'); playBeep()">AZUL</button>
-        </div>
+<body class="verde">
+  <div class="pipboy-container">
+    <div class="pipboy-circle">
+      <div class="menu-tabs">
+        <a href="contacto.html" class="menu-tab" onclick="playBeep()">[CONTACTO]</a>
+        <a href="educacion.html" class="menu-tab" onclick="playBeep()">[EDUCACIÓN]</a>
+        <a href="habilidades.html" class="menu-tab" onclick="playBeep()">[HABILIDADES]</a>
+        <a href="experiencia.html" class="menu-tab" onclick="playBeep()">[EXPERIENCIA]</a>
+        <a href="certificaciones.html" class="menu-tab" onclick="playBeep()">[CERTIFICACIONES]</a>
+      </div>
+      <div class="vaultboy">
+        <img src="vaultboy.gif" alt="Vault Boy Animado" />
+      </div>
+      <h2>BIENVENIDO AL CV DE JOSÉ MANUEL</h2>
+      <p>Selecciona una pestaña para ver más detalles.</p>
+      <div class="tema-selector">
+        <label>TEMA: </label>
+        <button onclick="setTheme('verde'); playBeep()">VERDE</button>
+        <button onclick="setTheme('naranja'); playBeep()">NARANJA</button>
+        <button onclick="setTheme('azul'); playBeep()">AZUL</button>
       </div>
     </div>
   </div>
@@ -41,4 +39,5 @@
   </script>
 </body>
 </html>
+
 
