@@ -2,30 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>🌐 Perfil Profesional</title>
+  <title>🌐 Perfil</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <script src="theme.js" defer></script>
 </head>
-<body>
-  <div class="crt">
+<body class="crt-lines">
+  <div class="pipboy-shell">
     <div class="pipboy">
-      <h1>🌐 Perfil Profesional</h1>
-      
-<p>Soy una persona trabajadora, autodidacta y con gran capacidad de adaptación.</p>
-<p>Busco crecer profesionalmente en el mundo de la informática y la ciberseguridad.</p>
-<p>🔗 <a href="https://www.linkedin.com/in/joshgh28" target="_blank">Mi LinkedIn</a></p>
-
-      
-    <a href="index.html">← Volver al inicio</a>
-    <div class="tema-selector">
-      <label>🎨 Tema:</label>
-      <button onclick="setTheme('verde')">Verde</button>
-      <button onclick="setTheme('naranja')">Naranja</button>
-      <button onclick="setTheme('azul')">Azul</button>
-    </div>
-
+      <h1>🌐 Perfil</h1>
+      <div class="pipboy-section">
+        <h2>🌐 Perfil Detalle</h2>
+        <div class="line"></div>
+        <p>Contenido en construcción.</p>
+      </div>
+      <a href="index.html">← Volver al inicio</a>
+      <div class="tema-selector">
+        <label>🎨 Tema: </label>
+        <button onclick="setTheme('verde'); playBeep()">Verde</button>
+        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
+        <button onclick="setTheme('azul'); playBeep()">Azul</button>
+      </div>
     </div>
   </div>
+  <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3" preload="auto"></audio>
+  <script>
+    function playBeep() {
+      const beep = document.getElementById('beep');
+      beep.currentTime = 0;
+      beep.play();
+    }
+  </script>
 </body>
 </html>

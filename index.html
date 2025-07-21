@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PIP‑BOY 3000</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<script src="boot.js" defer></script>
-<script src="theme.js" defer></script>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>PIP-BOY 3000 - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="boot.js" defer></script>
+  <script src="theme.js" defer></script>
 </head>
-<body>
-  <div class="crt">
-    <div id="boot-sequence"><pre id="boot-text" class="blink"></pre></div>
-    <div class="pipboy-shell hidden" id="main-shell">
-      <div class="pipboy-frame">
-        <div class="pipboy-side"><div class="pipboy-dial"></div>
-          <div class="button"></div><div class="button"></div><div class="button"></div>
-        </div>
-        <div class="pipboy-main">
-          <h1>📟 PIP‑BOY 3000 – JOSÉ MANUEL GONZÁLEZ HIDALGO</h1>
-          <nav><ul>
-            <li><span class="nav-icon">📘</span><a href="educacion.html" onclick="playBeep()">Educación</a></li>
-            <li><span class="nav-icon">📂</span><a href="experiencia.html" onclick="playBeep()">Experiencia</a></li>
-            <li><span class="nav-icon">🛠</span><a href="habilidades.html" onclick="playBeep()">Habilidades</a></li>
-            <li><span class="nav-icon">🌐</span><a href="perfil.html" onclick="playBeep()">Perfil</a></li>
-            <li><span class="nav-icon">🧪</span><a href="proyectos.html" onclick="playBeep()">Proyectos</a></li>
-            <li><span class="nav-icon">💻</span><a href="consola.html" onclick="playBeep()">Consola</a></li>
-          </ul></nav>
-          <div class="tema-selector">🎨 Tema:
-            <button onclick="setTheme('verde'); playBeep()">Verde</button>
-            <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
-            <button onclick="setTheme('azul'); playBeep()">Azul</button>
-          </div>
-        </div>
+<body class="verde crt-lines">
+  <div id="boot-sequence">
+    <pre id="boot-text"></pre>
+  </div>
+  <div class="pipboy-shell hidden" id="main-shell">
+    <div class="pipboy">
+      <h1>📟 PIP-BOY 3000 - MENÚ PRINCIPAL</h1>
+      <nav>
+        <ul>
+          <li><a href="educacion.html" onclick="playBeep()">📘 Educación</a></li>
+          <li><a href="experiencia.html" onclick="playBeep()">📂 Experiencia</a></li>
+          <li><a href="habilidades.html" onclick="playBeep()">🛠 Habilidades</a></li>
+          <li><a href="perfil.html" onclick="playBeep()">🌐 Perfil</a></li>
+          <li><a href="proyectos.html" onclick="playBeep()">🧪 Proyectos</a></li>
+          <li><a href="consola.html" onclick="playBeep()">💻 Consola</a></li>
+        </ul>
+      </nav>
+      <div class="tema-selector">
+        <label>🎨 Tema: </label>
+        <button onclick="setTheme('verde'); playBeep()">Verde</button>
+        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
+        <button onclick="setTheme('azul'); playBeep()">Azul</button>
       </div>
     </div>
-    <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3"></audio>
   </div>
-<script>
-function playBeep(){ const b=document.getElementById("beep");b.currentTime=0;b.play(); }
-</script>
-</body></html>
-
+  <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3" preload="auto"></audio>
+  <script>
+    function playBeep() {
+      const beep = document.getElementById('beep');
+      beep.currentTime = 0;
+      beep.play();
+    }
+  </script>
+</body>
+</html>
