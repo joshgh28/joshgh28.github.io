@@ -1,0 +1,1 @@
+const terminal = document.getElementById('terminal'); terminal.innerHTML = '>> whoami<br>> josemanuel@pipboy<br>> _';

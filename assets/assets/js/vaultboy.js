@@ -1,0 +1,1 @@
+// Aquí irá la animación del Vault Boy
