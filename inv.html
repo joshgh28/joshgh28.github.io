@@ -2,36 +2,45 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Inventario</title>
+  <title>INV</title>
   <link rel="stylesheet" href="style.css">
   <script src="theme.js" defer></script>
 </head>
 <body class="verde crt-lines">
   <div class="pipboy-shell">
     <div class="pipboy">
-      <div class="screen-border">
-        <h2>INVENTARIO DE HERRAMIENTAS</h2>
-        <ul>
-          <li>Windows Server</li>
-          <li>Ubuntu Server</li>
-          <li>MySQL</li>
-          <li>Oracle DB</li>
-          <li>C#</li>
-          <li>Proxmox</li>
-          <li>VirtualBox</li>
-          <li>VMware</li>
-        </ul>
-        <a href="index.html" onclick="playBeep()">Volver al menú principal</a>
+      
+<div class="menu-tabs">
+  <a href="stat.html" onclick="playBeep()">[STAT]</a>
+  <a href="inv.html" onclick="playBeep()">[INV]</a>
+  <a href="data.html" onclick="playBeep()">[DATA]</a>
+  <a href="map.html" onclick="playBeep()">[MAP]</a>
+  <a href="radio.html" onclick="playBeep()">[RADIO]</a>
+</div>
+
+      
+<div class="vaultboy">
+  <img src="vaultboy.gif" alt="Vault Boy Animado" />
+</div>
+
+      <h2>Inventario</h2><ul><li>Stimpak x3</li><li>RadAway x1</li><li>Arma: 10mm Pistol</li></ul>
+      <div class="tema-selector">
+        <label>🎨 Tema: </label>
+        <button onclick="setTheme('verde'); playBeep()">Verde</button>
+        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
+        <button onclick="setTheme('azul'); playBeep()">Azul</button>
       </div>
     </div>
   </div>
-  <audio id="beep" src="beep.mp3" preload="auto"></audio>
-  <script>
-    function playBeep() {
-      const beep = document.getElementById('beep');
-      beep.currentTime = 0;
-      beep.play();
-    }
-  </script>
+  
+<audio id="beep" src="beep.mp3" preload="auto"></audio>
+<script>
+  function playBeep() {
+    const beep = document.getElementById('beep');
+    beep.currentTime = 0;
+    beep.play();
+  }
+</script>
+
 </body>
 </html>

@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Perfil</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>🌐 Perfil</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="theme.js" defer></script>
 </head>
-<body class="verde crt-lines">
+<body class="crt-lines">
   <div class="pipboy-shell">
     <div class="pipboy">
-      <div class="screen-border">
-        <h2>PERFIL PROFESIONAL</h2>
-        <p>Técnico Informático en Sistemas y Redes con experiencia en administración de servidores, soporte técnico y gestión de infraestructuras de TI.</p>
-        <p>Apasionado por la tecnología y la resolución de problemas complejos en entornos de TI.</p>
-        <a href="index.html" onclick="playBeep()">Volver al menú principal</a>
+      <h1>🌐 Perfil</h1>
+      <div class="pipboy-section">
+        <h2>🌐 Perfil Detalle</h2>
+        <div class="line"></div>
+        <p>Contenido en construcción.</p>
+      </div>
+      <a href="index.html">← Volver al inicio</a>
+      <div class="tema-selector">
+        <label>🎨 Tema: </label>
+        <button onclick="setTheme('verde'); playBeep()">Verde</button>
+        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
+        <button onclick="setTheme('azul'); playBeep()">Azul</button>
       </div>
     </div>
   </div>
-  <audio id="beep" src="beep.mp3" preload="auto"></audio>
+  <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3" preload="auto"></audio>
   <script>
     function playBeep() {
       const beep = document.getElementById('beep');

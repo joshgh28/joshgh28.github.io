@@ -1,41 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Experiencia</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>📂 Experiencia</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="theme.js" defer></script>
 </head>
-<body class="verde crt-lines">
+<body class="crt-lines">
   <div class="pipboy-shell">
     <div class="pipboy">
-      <div class="screen-border">
-        <h2>EXPERIENCIA LABORAL</h2>
-        <h3>TÉCNICO DE SOPORTE DE TI - PSS</h3>
-        <p>Marzo 2025 - Julio 2025</p>
-        <ul>
-          <li>Participación como soporte técnico principal en el proyecto de asistencia informática para El Corte Inglés, en colaboración con Kyndryl (IBM).</li>
-          <li>Resolución de incidencias técnicas y seguimiento de solicitudes mediante herramientas de gestión de tickets como Smart IT (BMC).</li>
-          <li>Coordinación con otros equipos técnicos para la escalación y resolución de problemas complejos.</li>
-        </ul>
-        <h3>TÉCNICO DE SOPORTE DE TI - AERTEC</h3>
-        <p>Marzo 2024 - Diciembre 2024</p>
-        <ul>
-          <li>Proporcioné soporte técnico a usuarios finales, resolviendo problemas de hardware y software.</li>
-          <li>Instalé, configuré y actualicé equipos informáticos y aplicaciones.</li>
-          <li>Realicé mantenimiento preventivo y correctivo en sistemas para optimizar su rendimiento.</li>
-          <li>Gestioné servicios en Azure, asegurando la disponibilidad y seguridad de la infraestructura.</li>
-          <li>Administré CATIA, actuando como Focal Point entre Reino Unido y Alemania, proporcionando soporte y ayudando en la implementación de soluciones.</li>
-          <li>Trabajé en conjunto con AIRBUS y AENA, proporcionando soporte y maquetando equipos para ellos.</li>
-          <li>Configuré y mantuve WatchGuard VPN, garantizando conexiones seguras.</li>
-          <li>Realicé mantenimiento y soporte de software Autodesk.</li>
-          <li>Utilicé plataformas de tickets como Service Management y Zendesk para la gestión eficiente de incidencias.</li>
-        </ul>
-        <a href="index.html" onclick="playBeep()">Volver al menú principal</a>
+      <h1>📂 Experiencia</h1>
+      <div class="pipboy-section">
+        <h2>📂 Experiencia Detalle</h2>
+        <div class="line"></div>
+        <p>Contenido en construcción.</p>
+      </div>
+      <a href="index.html">← Volver al inicio</a>
+      <div class="tema-selector">
+        <label>🎨 Tema: </label>
+        <button onclick="setTheme('verde'); playBeep()">Verde</button>
+        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
+        <button onclick="setTheme('azul'); playBeep()">Azul</button>
       </div>
     </div>
   </div>
-  <audio id="beep" src="beep.mp3" preload="auto"></audio>
+  <audio id="beep" src="https://freesound.org/data/previews/341/341695_6261194-lq.mp3" preload="auto"></audio>
   <script>
     function playBeep() {
       const beep = document.getElementById('beep');
