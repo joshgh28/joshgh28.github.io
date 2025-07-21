@@ -7,36 +7,125 @@
   <script src="theme.js" defer></script>
 </head>
 <body class="verde">
-  <div class="pipboy-container">
-    <div class="pipboy-circle">
-      <div class="menu-tabs">
-        <a href="contacto.html" class="menu-tab" onclick="playBeep()">[CONTACTO]</a>
-        <a href="educacion.html" class="menu-tab" onclick="playBeep()">[EDUCACIÓN]</a>
-        <a href="habilidades.html" class="menu-tab" onclick="playBeep()">[HABILIDADES]</a>
-        <a href="experiencia.html" class="menu-tab" onclick="playBeep()">[EXPERIENCIA]</a>
-        <a href="certificaciones.html" class="menu-tab" onclick="playBeep()">[CERTIFICACIONES]</a>
+  <div class="pip">
+    <div class="pipfront">
+      <div class="top">
+        <div class="top-panel"></div>
       </div>
-      <div class="vaultboy">
-        <img src="vaultboy.gif" alt="Vault Boy Animado" />
+      <div class="top-button"></div>
+      <div class="screw1"></div>
+      <div class="screw2"></div>
+      <div class="screen-border">
+        <div class="screen">
+          <div class="screen-reflection"></div>
+          <div class="scan"></div>
+          <nav>
+            <span class="active stat">[CONTACTO]</span>
+            <span class="inv">[EDUCACIÓN]</span>
+            <span class="data">[HABILIDADES]</span>
+            <span class="map">[EXPERIENCIA]</span>
+            <span class="radio">[CERTIFICACIONES]</span>
+            <p><span class="status">[IDIOMAS]</span><span class="off special"></span></p>
+          </nav>
+          <div class="vaultboy">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+            <div class="bar6"></div>
+          </div>
+          <div class="supplies">
+            <span>Stimpak (0)</span>
+            <span>Radaway (0)</span>
+            <span>Stix</span>
+          </div>
+          <div class="info-bar">
+            <span class="weapon"></span>
+            <span class="aim"><p>21</p></span>
+            <span class="helmet"></span>
+            <span class="shield"><p>110</p></span>
+            <span class="voltage"><p>126</p></span>
+            <span class="nuclear"><p>35</p></span>
+          </div>
+          <div class="hud-bar">
+            <div class="hp"></div>
+            <div class="exp"></div>
+            <div class="ap"></div>
+          </div>
+          <div class="content">
+            <h2>JOSÉ MANUEL GONZÁLEZ HIDALGO</h2>
+            <p>Técnico Informático en Sistemas y Redes</p>
+            <p>Bienvenido a mi portafolio. Selecciona una opción para ver más detalles.</p>
+          </div>
+        </div>
       </div>
-      <h2>BIENVENIDO AL CV DE JOSÉ MANUEL</h2>
-      <p>Selecciona una pestaña para ver más detalles.</p>
-      <div class="tema-selector">
-        <label>TEMA: </label>
-        <button onclick="setTheme('verde'); playBeep()">VERDE</button>
-        <button onclick="setTheme('naranja'); playBeep()">NARANJA</button>
-        <button onclick="setTheme('azul'); playBeep()">AZUL</button>
+      <div class="power"></div>
+      <div class="screw4"></div>
+      <div class="screw5"></div>
+    </div>
+    <div class="left-wheel">
+      <div class="left-wheel-shadow"></div>
+      <div class="left-wheel-shadow"></div>
+      <div class="left-wheel-shadow"></div>
+      <div class="left-wheel-shadow"></div>
+    </div>
+    <div class="wheel">
+      <div class="tab-names">
+        <li class="stat"></li>
+        <li class="inv"></li>
+        <li class="data"></li>
+        <li class="map"></li>
+        <li class="radio"></li>
+      </div>
+      <div class="wheel-shadow"></div>
+      <div class="wheel-shadow"></div>
+      <div class="wheel-shadow"></div>
+      <div class="wheel-shadow"></div>
+      <div class="wheel-shadow"></div>
+      <div class="wheel-plug"></div>
+      <div class="wheel-wire"></div>
+    </div>
+    <div class="rads">
+      <div class="rads-meter">
+        <div class="rads-value"></div>
+        <div class="bump1"></div>
       </div>
     </div>
+    <div class="speakers">
+      <div class="speaker"></div>
+      <div class="speaker"></div>
+      <div class="speaker"></div>
+      <div class="speaker"></div>
+    </div>
+    <div class="left-speakers">
+      <div class="left-speaker"></div>
+      <div class="left-speaker"></div>
+      <div class="left-speaker"></div>
+      <div class="left-speaker"></div>
+      <div class="screw3"></div>
+    </div>
+    <div class="bump2"></div>
+    <div class="bump3"></div>
+    <div class="tune-meter"></div>
+    <div class="tune-wheel">
+      <div class="analog"></div>
+    </div>
+    <div class="bottom">
+      <div class="bottom-clips">
+        <div class="bottom-clip"><span></span></div>
+        <div class="bottom-clip"><span></span></div>
+        <div class="bottom-clip"><span></span></div>
+        <div class="bottom-clip"><span></span></div>
+      </div>
+      <div class="bottom-switch"></div>
+      <div class="bump4"></div>
+      <div class="bump5"></div>
+    </div>
+    <div class="roulette"></div>
+    <div class="top-right"></div>
+    <div class="spike-wheel"></div>
   </div>
-  <audio id="beep" src="beep.mp3" preload="auto"></audio>
-  <script>
-    function playBeep() {
-      const beep = document.getElementById('beep');
-      beep.currentTime = 0;
-      beep.play();
-    }
-  </script>
 </body>
 </html>
 
