@@ -1,1 +1,0 @@
-window.onload = () => console.log('Pip-Boy OS iniciado...');
