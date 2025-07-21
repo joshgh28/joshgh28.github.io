@@ -1,25 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 
-::-moz-selection { background: lightgreen; }
-::selection { background: lightgreen; }
+::-moz-selection {
+  background: lightgreen;
+}
+
+::selection {
+  background: lightgreen;
+}
 
 body {
   background: #111;
   font-family: 'Droid Sans', sans-serif;
-  font-size: 7pt;
+  font-size: 10pt;
   color: #d8c99e;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body.verde {
+  --theme-color: #0f0;
+}
+
+body.naranja {
+  --theme-color: #ffaa00;
+}
+
+body.azul {
+  --theme-color: #00ffff;
+}
+
+.pip {
+  width: 90%;
+  max-width: 900px;
+  height: 80vh;
+  background: #8b7867;
+  background: linear-gradient(#8b7867, #4f4138);
+  margin: auto;
+  border-radius: 50px;
+  border-bottom-right-radius: 90px;
+  border-top: 2px solid #c3bfb4;
+  position: relative;
 }
 
 .pipfront {
-  width: 450px;
-  height: 400px;
-  background: #8b7867;
-  background: linear-gradient(#8b7867, #726350);
-  left: 45px;
-  position: absolute;
-  top: -60px;
+  width: 100%;
+  height: 100%;
   padding-top: 30px;
   border-radius: 100px;
   border-top-right-radius: 70px;
@@ -31,36 +62,37 @@ body {
   box-shadow: 0px 0px 5px #3f2d21;
 }
 
+
+
 .pipfront:after {
   content: "";
   display: block;
-  width: 310px;
-  height: 55px;
+  width: 80%;
+  height: 10%;
   background: linear-gradient(#776754, #726350);
-  margin-top: 0px;
-  margin-left: 87px;
+  margin: 0 auto;
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
   box-shadow: 0px 2px 4px #4e4037;
 }
 
 .top {
-  width: 120px;
-  height: 50px;
+  width: 20%;
+  height: 10%;
   background: #111;
   position: absolute;
-  top: -15px;
-  left: 165px;
+  top: 2%;
+  left: 40%;
   z-index: -4;
 }
 
 .top:after, .top:before {
   content: "";
   display: block;
-  width: 45px;
-  height: 30px;
+  width: 20%;
+  height: 60%;
   background: #c3bfb4;
-  margin-top: 5px;
+  margin-top: 5%;
   z-index: -1;
   position: relative;
 }
@@ -79,42 +111,117 @@ body {
 }
 
 .top-panel {
-  width: 130px;
-  height: 40px;
+  width: 25%;
+  height: 8%;
   background: #5a5f5b;
   position: absolute;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  left: -5px;
-  top: 15px;
+  left: 37%;
+  top: 5%;
 }
 
 .top-panel:before {
-  content: "";
-  display: block;
-  background: #272b2a;
-  width: 130px;
-  height: 30px;
-  margin: 15px auto 0 auto;
-  position: relative;
-  z-index: 99;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.top-panel:after {
   content: "Pip-Boy";
   color: #151515;
   font-family: 'Courier New', sans-serif;
   letter-spacing: 2px;
-  font-size: 12pt;
+  font-size: 16pt;
   text-shadow: 0px 0px 0.5px #444;
   position: absolute;
-  top: 23px;
-  left: 26px;
+  top: 50%;
+  left: 35%;
   z-index: 99;
+}
+
+.top-button {
+  width: 10%;
+  height: 3%;
+  background: #000;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top: 1px solid #444;
+  transform: rotate(27deg);
+}
+
+.top-button:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 50%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(255, 255, 255, 0.8));
+  margin-left: 30%;
+  margin-top: -50%;
+  border-radius: 2px;
+  border: 1px solid #333;
+
+.screen-border {
+  background: #272b2a;
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  border-radius: 50px;
+  padding-top: 5%;
+  border-top: 10px solid #5a5f5b;
+  border-bottom: 5px solid #3a3e41;
+  position: relative;
+  z-index: -5;
+}
+
+.screen {
+  width: 85%;
+  height: 75%;
+  position: absolute;
+  margin-left: 7%;
+  border-radius: 20px;
+  background: #000;
+  border: 5px solid #333;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20%;
+  color: #8df776;
+  font-size: 14pt;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.menu-tab {
+  color: inherit;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #8df776;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu-tab:hover {
+  background: #8df776;
+  color: #000;
+}
+
+.vaultboy {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/184191/vaultboy2.gif');
+  background-size: 15%;
+  background-position: center;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  left: 40%;
+  top: 20%;
 }
 
 .top-button {
