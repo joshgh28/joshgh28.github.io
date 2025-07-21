@@ -2,45 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>STAT</title>
+  <title>Estadísticas</title>
   <link rel="stylesheet" href="style.css">
   <script src="theme.js" defer></script>
 </head>
 <body class="verde crt-lines">
   <div class="pipboy-shell">
     <div class="pipboy">
-      
-<div class="menu-tabs">
-  <a href="stat.html" onclick="playBeep()">[STAT]</a>
-  <a href="inv.html" onclick="playBeep()">[INV]</a>
-  <a href="data.html" onclick="playBeep()">[DATA]</a>
-  <a href="map.html" onclick="playBeep()">[MAP]</a>
-  <a href="radio.html" onclick="playBeep()">[RADIO]</a>
-</div>
-
-      
-<div class="vaultboy">
-  <img src="vaultboy.gif" alt="Vault Boy Animado" />
-</div>
-
-      <h2>Estado del Superviviente</h2><p>HP: 360/360 | Nivel: 42 | S.P.E.C.I.A.L.</p>
-      <div class="tema-selector">
-        <label>🎨 Tema: </label>
-        <button onclick="setTheme('verde'); playBeep()">Verde</button>
-        <button onclick="setTheme('naranja'); playBeep()">Naranja</button>
-        <button onclick="setTheme('azul'); playBeep()">Azul</button>
+      <div class="screen-border">
+        <h2>ESTADÍSTICAS PROFESIONALES</h2>
+        <p>Años de experiencia: 5+</p>
+        <p>Proyectos completados: 20+</p>
+        <p>Certificaciones obtenidas: 5</p>
+        <a href="index.html" onclick="playBeep()">Volver al menú principal</a>
       </div>
     </div>
   </div>
-  
-<audio id="beep" src="beep.mp3" preload="auto"></audio>
-<script>
-  function playBeep() {
-    const beep = document.getElementById('beep');
-    beep.currentTime = 0;
-    beep.play();
-  }
-</script>
-
+  <audio id="beep" src="beep.mp3" preload="auto"></audio>
+  <script>
+    function playBeep() {
+      const beep = document.getElementById('beep');
+      beep.currentTime = 0;
+      beep.play();
+    }
+  </script>
 </body>
 </html>
