@@ -3,3 +3,4 @@ function playSonido() {
   sonido.currentTime = 0;
   sonido.play();
 }
+
