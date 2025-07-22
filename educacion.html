@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Educación</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="theme.js" defer></script>
 </head>
-<body class="diario">
-  <div class="diario-container">
-    <div class="pagina">
+<body>
+  <div class="container">
+    <aside class="menu">
+      <a href="index.html" class="tab" onclick="playSound()">Inicio</a>
+      <a href="contacto.html" class="tab" onclick="playSound()">Contacto</a>
+      <a href="habilidades.html" class="tab" onclick="playSound()">Habilidades</a>
+      <a href="experiencia.html" class="tab" onclick="playSound()">Experiencia</a>
+      <a href="certificaciones.html" class="tab" onclick="playSound()">Certificaciones</a>
+    </aside>
+    <main class="pagina">
       <h2>Educación</h2>
-      <h3>Grado Superior en Administración de Sistemas Informáticos y Redes</h3>
-      <h3>Grado Medio en Sistemas Microinformáticos y Redes</h3>
-      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
-    </div>
+      <ul>
+        <li>🎓 Grado Superior en Administración de Sistemas Informáticos y Redes</li>
+        <li>🎓 Grado Medio en Sistemas Microinformáticos y Redes</li>
+      </ul>
+    </main>
   </div>
-  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
-  <script>
-    function playSonido() {
-      const sonido = document.getElementById('pagina');
-      sonido.currentTime = 0;
-      sonido.play();
-    }
-  </script>
+  <audio id="pageSound" src="pagina.mp3" preload="auto"></audio>
 </body>
 </html>

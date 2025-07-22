@@ -1,141 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Diario Postapocalíptico - CV</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Diario de José Manuel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <script src="particles.min.js" defer></script>
   <script src="theme.js" defer></script>
 </head>
-<body class="diario">
-  <div class="diario-container">
-    <div class="menu-lateral">
-      <a href="contacto.html" class="menu-link">Contacto</a>
-      <a href="educacion.html" class="menu-link">Educación</a>
-      <a href="habilidades.html" class="menu-link">Habilidades</a>
-      <a href="experiencia.html" class="menu-link">Experiencia</a>
-      <a href="certificaciones.html" class="menu-link">Certificaciones</a>
-    </div>
-    <div class="pagina">
+<body>
+  <div class="container">
+    <aside class="menu">
+      <a href="index.html" onclick="playSound()" class="tab">Inicio</a>
+      <a href="contacto.html" onclick="playSound()" class="tab">Contacto</a>
+      <a href="educacion.html" onclick="playSound()" class="tab">Educación</a>
+      <a href="habilidades.html" onclick="playSound()" class="tab">Habilidades</a>
+      <a href="experiencia.html" onclick="playSound()" class="tab">Experiencia</a>
+      <a href="certificaciones.html" onclick="playSound()" class="tab">Certificaciones</a>
+    </aside>
+    <main class="pagina">
       <h1>Diario de José Manuel</h1>
       <p>Técnico Informático en Sistemas y Redes</p>
-      <p>Bienvenido a mi diario. Selecciona una opción del menú lateral para ver más detalles.</p>
-    </div>
+      <p>Explora mis habilidades y experiencia profesional en este diario postapocalíptico.</p>
+    </main>
   </div>
-  <div id="particles-js"></div>
-  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    function playSonido() {
-      const sonido = document.getElementById('pagina');
-      sonido.currentTime = 0;
-      sonido.play();
-    }
 
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: ["#d4a373", "#5a3921", "#3a2c1a"]
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "#000000"
-          },
-          polygon: {
-            nb_sides: 5
-          }
-        },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#d4a373",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200
-          }
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "grab"
-          },
-          onclick: {
-            enable: true,
-            mode: "push"
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4
-          },
-          remove: {
-            particles_nb: 2
-          }
-        }
-      },
-      retina_detect: true
-    });
-  </script>
+  <div id="particles-js"></div>
+  <audio id="pageSound" src="pagina.mp3" preload="auto"></audio>
 </body>
 </html>

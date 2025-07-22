@@ -1,146 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Contacto</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="theme.js" defer></script>
 </head>
-<body class="diario">
-  <div class="diario-container">
-    <div class="menu-lateral">
-      <a href="index.html" class="menu-link">Inicio</a>
-      <a href="educacion.html" class="menu-link">Educación</a>
-      <a href="habilidades.html" class="menu-link">Habilidades</a>
-      <a href="experiencia.html" class="menu-link">Experiencia</a>
-      <a href="certificaciones.html" class="menu-link">Certificaciones</a>
-    </div>
-    <div class="pagina">
+<body>
+  <div class="container">
+    <aside class="menu">
+      <a href="index.html" class="tab" onclick="playSound()">Inicio</a>
+      <a href="educacion.html" class="tab" onclick="playSound()">Educación</a>
+      <a href="habilidades.html" class="tab" onclick="playSound()">Habilidades</a>
+      <a href="experiencia.html" class="tab" onclick="playSound()">Experiencia</a>
+      <a href="certificaciones.html" class="tab" onclick="playSound()">Certificaciones</a>
+    </aside>
+    <main class="pagina">
       <h2>Contacto</h2>
-      <p>Email: josegonh28@hotmail.com</p>
-      <p>LinkedIn: www.linkedin.com/in/josegonzálezhidalgo</p>
-      <p>Ubicación: Málaga, España</p>
-    </div>
+      <p><strong>Email:</strong> josegonh28@hotmail.com</p>
+      <p><strong>LinkedIn:</strong> www.linkedin.com/in/josegonzálezhidalgo</p>
+      <p><strong>Ubicación:</strong> Málaga, España</p>
+    </main>
   </div>
-  <div id="particles-js"></div>
-  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
-  <script>
-    function playSonido() {
-      const sonido = document.getElementById('pagina');
-      sonido.currentTime = 0;
-      sonido.play();
-    }
-
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: ["#d4a373", "#5a3921", "#3a2c1a"]
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "#000000"
-          },
-          polygon: {
-            nb_sides: 5
-          }
-        },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#d4a373",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200
-          }
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "grab"
-          },
-          onclick: {
-            enable: true,
-            mode: "push"
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4
-          },
-          remove: {
-            particles_nb: 2
-          }
-        }
-      },
-      retina_detect: true
-    });
-  </script>
+  <audio id="pageSound" src="pagina.mp3" preload="auto"></audio>
 </body>
 </html>
-
-
-
-
 
