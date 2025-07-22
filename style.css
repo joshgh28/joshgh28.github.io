@@ -1,6 +1,5 @@
 body {
-  background-color: #1a120b;
-  background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+  background-color: #121212;
   font-family: 'Courier New', monospace;
   color: #d4a373;
   margin: 0;
@@ -9,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
 }
 
 .diario-container {
@@ -16,7 +16,7 @@ body {
   width: 90%;
   max-width: 1000px;
   height: 80vh;
-  background-color: rgba(34, 25, 25, 0.8);
+  background-color: rgba(34, 25, 25, 0.9);
   box-shadow: 0 0 20px rgba(84, 57, 33, 0.7);
   position: relative;
   border-radius: 5px;
@@ -47,7 +47,7 @@ body {
 
 .menu-link:hover {
   background-color: #d4a373;
-  color: #1a120b;
+  color: #121212;
 }
 
 .pagina {
@@ -86,12 +86,6 @@ h1, h2 {
   z-index: -1;
 }
 
-/* Estilo para simular las páginas del diario */
-.pagina {
-  position: relative;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
 /* Estilo para simular las líneas del papel */
 .pagina::after {
   content: "";
@@ -104,3 +98,4 @@ h1, h2 {
   opacity: 0.3;
   z-index: -1;
 }
+
