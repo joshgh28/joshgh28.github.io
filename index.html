@@ -4,28 +4,28 @@
   <meta charset="UTF-8" />
   <title>Diario de José Manuel</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-  <script src="particles.min.js" defer></script>
   <script src="theme.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <aside class="menu">
-      <a href="index.html" onclick="playSound()" class="tab">Inicio</a>
-      <a href="contacto.html" onclick="playSound()" class="tab">Contacto</a>
-      <a href="educacion.html" onclick="playSound()" class="tab">Educación</a>
-      <a href="habilidades.html" onclick="playSound()" class="tab">Habilidades</a>
-      <a href="experiencia.html" onclick="playSound()" class="tab">Experiencia</a>
-      <a href="certificaciones.html" onclick="playSound()" class="tab">Certificaciones</a>
-    </aside>
-    <main class="pagina">
-      <h1>Diario de José Manuel</h1>
-      <p>Técnico Informático en Sistemas y Redes</p>
-      <p>Explora mis habilidades y experiencia profesional en este diario postapocalíptico.</p>
-    </main>
+  <div class="diario-container">
+    <div class="menu-lateral">
+      <a href="contacto.html" class="menu-link" onclick="playSonido()">Contacto</a>
+      <a href="educacion.html" class="menu-link" onclick="playSonido()">Educación</a>
+      <a href="habilidades.html" class="menu-link" onclick="playSonido()">Habilidades</a>
+      <a href="experiencia.html" class="menu-link" onclick="playSonido()">Experiencia</a>
+      <a href="certificaciones.html" class="menu-link" onclick="playSonido()">Certificaciones</a>
+    </div>
+    <div class="pagina">
+      <h1>Bienvenido a mi Diario</h1>
+      <p>Mi nombre es <strong>José Manuel González</strong>.</p>
+      <p>Soy Técnico Informático especializado en Sistemas y Redes.</p>
+      <p>En este diario encontrarás mi trayectoria profesional.</p>
+    </div>
   </div>
-
   <div id="particles-js"></div>
-  <audio id="pageSound" src="pagina.mp3" preload="auto"></audio>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="particles-config.js"></script>
 </body>
 </html>
+

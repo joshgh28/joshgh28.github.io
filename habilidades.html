@@ -7,28 +7,31 @@
   <script src="theme.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <aside class="menu">
-      <a href="index.html" class="tab" onclick="playSound()">Inicio</a>
-      <a href="contacto.html" class="tab" onclick="playSound()">Contacto</a>
-      <a href="educacion.html" class="tab" onclick="playSound()">Educación</a>
-      <a href="experiencia.html" class="tab" onclick="playSound()">Experiencia</a>
-      <a href="certificaciones.html" class="tab" onclick="playSound()">Certificaciones</a>
-    </aside>
-    <main class="pagina">
-      <h2>Habilidades</h2>
+  <div class="diario-container">
+    <div class="menu-lateral">
+      <a href="index.html" class="menu-link" onclick="playSonido()">Inicio</a>
+      <a href="contacto.html" class="menu-link" onclick="playSonido()">Contacto</a>
+      <a href="educacion.html" class="menu-link" onclick="playSonido()">Educación</a>
+      <a href="experiencia.html" class="menu-link" onclick="playSonido()">Experiencia</a>
+      <a href="certificaciones.html" class="menu-link" onclick="playSonido()">Certificaciones</a>
+    </div>
+    <div class="pagina">
+      <h2>Habilidades Técnicas</h2>
       <ul>
-        <li>🛠 Windows Server, Ubuntu Server</li>
-        <li>💾 MySQL, Oracle DB, MariaDB, MongoDB</li>
-        <li>💻 C#, Visual Studio, HTML, CSS</li>
-        <li>🖥 Proxmox, VirtualBox, VMware</li>
-        <li>☁️ Azure</li>
-        <li>📐 CATIA</li>
-        <li>🔐 WatchGuard VPN</li>
+        <li>Windows Server, Ubuntu Server</li>
+        <li>MySQL, Oracle DB, MariaDB, MongoDB</li>
+        <li>Proxmox, VirtualBox, VMware</li>
+        <li>Visual Studio, C#</li>
+        <li>HTML, CSS</li>
+        <li>Azure, CATIA, WatchGuard VPN</li>
       </ul>
-    </main>
+    </div>
   </div>
-  <audio id="pageSound" src="pagina.mp3" preload="auto"></audio>
+  <div id="particles-js"></div>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="particles-config.js"></script>
 </body>
 </html>
+
 

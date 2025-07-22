@@ -7,22 +7,26 @@
   <script src="theme.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <aside class="menu">
-      <a href="index.html" class="tab" onclick="playSound()">Inicio</a>
-      <a href="contacto.html" class="tab" onclick="playSound()">Contacto</a>
-      <a href="habilidades.html" class="tab" onclick="playSound()">Habilidades</a>
-      <a href="experiencia.html" class="tab" onclick="playSound()">Experiencia</a>
-      <a href="certificaciones.html" class="tab" onclick="playSound()">Certificaciones</a>
-    </aside>
-    <main class="pagina">
-      <h2>Educación</h2>
+  <div class="diario-container">
+    <div class="menu-lateral">
+      <a href="index.html" class="menu-link" onclick="playSonido()">Inicio</a>
+      <a href="contacto.html" class="menu-link" onclick="playSonido()">Contacto</a>
+      <a href="habilidades.html" class="menu-link" onclick="playSonido()">Habilidades</a>
+      <a href="experiencia.html" class="menu-link" onclick="playSonido()">Experiencia</a>
+      <a href="certificaciones.html" class="menu-link" onclick="playSonido()">Certificaciones</a>
+    </div>
+    <div class="pagina">
+      <h2>Formación Académica</h2>
       <ul>
-        <li>🎓 Grado Superior en Administración de Sistemas Informáticos y Redes</li>
-        <li>🎓 Grado Medio en Sistemas Microinformáticos y Redes</li>
+        <li><strong>Grado Superior</strong> en Administración de Sistemas Informáticos en Red</li>
+        <li><strong>Grado Medio</strong> en Sistemas Microinformáticos y Redes</li>
       </ul>
-    </main>
+    </div>
   </div>
-  <audio id="pageSound" src="pagina.mp3" preload="auto"></audio>
+  <div id="particles-js"></div>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="particles-config.js"></script>
 </body>
 </html>
+
