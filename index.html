@@ -8,17 +8,18 @@
 </head>
 <body class="diario">
   <div class="diario-container">
-    <div class="portada">
-      <h1>Diario de José Manuel</h1>
-      <p>Técnico Informático en Sistemas y Redes</p>
-    </div>
-    <nav>
+    <div class="menu-lateral">
       <a href="contacto.html" class="menu-link">Contacto</a>
       <a href="educacion.html" class="menu-link">Educación</a>
       <a href="habilidades.html" class="menu-link">Habilidades</a>
       <a href="experiencia.html" class="menu-link">Experiencia</a>
       <a href="certificaciones.html" class="menu-link">Certificaciones</a>
-    </nav>
+    </div>
+    <div class="pagina">
+      <h1>Diario de José Manuel</h1>
+      <p>Técnico Informático en Sistemas y Redes</p>
+      <p>Bienvenido a mi diario. Selecciona una opción del menú lateral para ver más detalles.</p>
+    </div>
   </div>
   <div id="particles-js"></div>
   <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
@@ -30,7 +31,6 @@
       sonido.play();
     }
 
-    // Configuración de partículas
     particlesJS('particles-js', {
       particles: {
         number: { value: 50, density: { enable: true, value_area: 800 } },
@@ -60,5 +60,7 @@
   </script>
 </body>
 </html>
+
+
 
 

@@ -8,14 +8,21 @@
 </head>
 <body class="diario">
   <div class="diario-container">
+    <div class="menu-lateral">
+      <a href="index.html" class="menu-link">Inicio</a>
+      <a href="educacion.html" class="menu-link">Educación</a>
+      <a href="habilidades.html" class="menu-link">Habilidades</a>
+      <a href="experiencia.html" class="menu-link">Experiencia</a>
+      <a href="certificaciones.html" class="menu-link">Certificaciones</a>
+    </div>
     <div class="pagina">
       <h2>Contacto</h2>
       <p>Email: josegonh28@hotmail.com</p>
       <p>LinkedIn: www.linkedin.com/in/josegonzálezhidalgo</p>
       <p>Ubicación: Málaga, España</p>
-      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
     </div>
   </div>
+  <div id="particles-js"></div>
   <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
   <script>
     function playSonido() {
@@ -23,7 +30,36 @@
       sonido.currentTime = 0;
       sonido.play();
     }
+
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 800 } },
+        color: { value: "#5a3921" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: false },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      }
+    });
   </script>
 </body>
 </html>
+
+
 

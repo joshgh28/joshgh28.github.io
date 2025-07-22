@@ -4,7 +4,7 @@ body {
   font-family: 'Courier New', monospace;
   color: #d4a373;
   margin: 0;
-  padding: 20px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,47 +12,56 @@ body {
 }
 
 .diario-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh;
   background-color: rgba(34, 25, 25, 0.8);
-  border: 1px solid #5a3921;
-  box-shadow: 0 0 10px rgba(84, 57, 33, 0.5);
-  width: 80%;
-  max-width: 800px;
-  padding: 40px;
-  text-align: center;
+  box-shadow: 0 0 20px rgba(84, 57, 33, 0.7);
   position: relative;
-  overflow: hidden;
-}
-
-.portada, .pagina {
-  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
   border: 1px solid #5a3921;
+}
+
+.menu-lateral {
+  width: 20%;
+  background-color: rgba(34, 25, 25, 0.9);
   padding: 20px;
-  margin: 10px 0;
-  color: #d4a373;
-}
-
-h1, h2, h3 {
-  color: #d4a373;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-nav {
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #5a3921;
 }
 
 .menu-link {
   color: #d4a373;
   text-decoration: none;
-  margin: 0 10px;
-  padding: 5px 10px;
+  margin: 10px 0;
+  padding: 10px;
   border: 1px solid #d4a373;
   border-radius: 5px;
   transition: background-color 0.3s;
+  width: 80%;
+  text-align: center;
 }
 
 .menu-link:hover {
   background-color: #d4a373;
   color: #1a120b;
+}
+
+.pagina {
+  width: 80%;
+  padding: 40px;
+  color: #d4a373;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 1px solid #5a3921;
+}
+
+h1, h2 {
+  color: #d4a373;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #particles-js {
@@ -64,3 +73,34 @@ nav {
   z-index: -1;
 }
 
+/* Estilo para simular el papel del diario */
+.pagina::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-2.png');
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Estilo para simular las páginas del diario */
+.pagina {
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para simular las líneas del papel */
+.pagina::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(transparent, transparent 29px, rgba(180, 160, 130, 0.3) 30px);
+  opacity: 0.3;
+  z-index: -1;
+}
