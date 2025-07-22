@@ -1,1 +1,43 @@
-<html><body><div class='pagina'><h2>Habilidades</h2><p>Windows Server, Ubuntu, MySQL, Oracle DB, C#, VirtualBox, VMware, CSS, HTML, MongoDB, CATIA, Azure, WatchGuard VPN</p></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Habilidades</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body class="diario">
+  <div class="diario-container">
+    <div class="pagina">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Windows Server</li>
+        <li>Ubuntu Server</li>
+        <li>MySQL</li>
+        <li>Oracle DB</li>
+        <li>C#</li>
+        <li>Proxmox</li>
+        <li>VirtualBox</li>
+        <li>VMware</li>
+        <li>Visual Studio</li>
+        <li>MongoDB</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>MariaDB</li>
+        <li>Azure</li>
+        <li>CATIA</li>
+        <li>Watchguard VPN</li>
+      </ul>
+      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
+    </div>
+  </div>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script>
+    function playSonido() {
+      const sonido = document.getElementById('pagina');
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+  </script>
+</body>
+</html>

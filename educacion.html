@@ -1,1 +1,27 @@
-<html><body><div class='pagina'><h2>Educación</h2><ul><li>GS Administración de Sistemas Informáticos y Redes</li><li>GM Sistemas Microinformáticos y Redes</li></ul></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Educación</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body class="diario">
+  <div class="diario-container">
+    <div class="pagina">
+      <h2>Educación</h2>
+      <h3>Grado Superior en Administración de Sistemas Informáticos y Redes</h3>
+      <h3>Grado Medio en Sistemas Microinformáticos y Redes</h3>
+      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
+    </div>
+  </div>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script>
+    function playSonido() {
+      const sonido = document.getElementById('pagina');
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+  </script>
+</body>
+</html>

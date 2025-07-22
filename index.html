@@ -1,29 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diario - Inicio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <title>Diario Postapocalíptico - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
 </head>
-<body>
-  <div class="diary">
-    <nav class="menu">
-      <a href="contacto.html">Contacto</a>
-      <a href="educacion.html">Educación</a>
-      <a href="experiencia.html">Experiencia</a>
-      <a href="habilidades.html">Habilidades</a>
-      <a href="certificados.html">Certificados</a>
-      <a href="idiomas.html">Idiomas</a>
-    </nav>
-    <div class="pagina">
-      <h1>José Manuel González</h1>
-      <p>Bienvenido a mi diario de supervivencia tecnológica.</p>
+<body class="diario">
+  <div class="diario-container">
+    <div class="portada">
+      <h1>Diario de José Manuel</h1>
+      <p>Técnico Informático en Sistemas y Redes</p>
     </div>
-    <div class="esporas"></div>
+    <nav>
+      <a href="contacto.html" class="menu-link">Contacto</a>
+      <a href="educacion.html" class="menu-link">Educación</a>
+      <a href="habilidades.html" class="menu-link">Habilidades</a>
+      <a href="experiencia.html" class="menu-link">Experiencia</a>
+      <a href="certificaciones.html" class="menu-link">Certificaciones</a>
+    </nav>
   </div>
-  <script src="script.js"></script>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script>
+    function playSonido() {
+      const sonido = document.getElementById('pagina');
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+  </script>
 </body>
 </html>
+

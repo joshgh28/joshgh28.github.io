@@ -1,1 +1,28 @@
-<html><body><div class='pagina'><h2>Certificados</h2><p>Soporte TI - Google</p></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificaciones</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body class="diario">
+  <div class="diario-container">
+    <div class="pagina">
+      <h2>Certificaciones</h2>
+      <ul>
+        <li>Certificado de soporte de TI de Google</li>
+      </ul>
+      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
+    </div>
+  </div>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script>
+    function playSonido() {
+      const sonido = document.getElementById('pagina');
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+  </script>
+</body>
+</html>

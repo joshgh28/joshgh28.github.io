@@ -1,31 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
 </head>
-<body>
-  <div class="diary">
-    <nav class="menu">
-      <a href="index.html">Inicio</a>
-      <a href="educacion.html">Educación</a>
-      <a href="experiencia.html">Experiencia</a>
-      <a href="habilidades.html">Habilidades</a>
-      <a href="certificados.html">Certificados</a>
-      <a href="idiomas.html">Idiomas</a>
-    </nav>
+<body class="diario">
+  <div class="diario-container">
     <div class="pagina">
       <h2>Contacto</h2>
       <p>Email: josegonh28@hotmail.com</p>
       <p>LinkedIn: www.linkedin.com/in/josegonzálezhidalgo</p>
       <p>Ubicación: Málaga, España</p>
+      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
     </div>
-    <div class="esporas"></div>
   </div>
-  <script src="script.js"></script>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script>
+    function playSonido() {
+      const sonido = document.getElementById('pagina');
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+  </script>
 </body>
 </html>
+

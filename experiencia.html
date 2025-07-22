@@ -1,1 +1,37 @@
-<html><body><div class='pagina'><h2>Experiencia</h2><p>AERTEC: Soporte técnico, Azure, CATIA, VPN</p><p>ATG UNICAJA: Administración de sistemas, Oracle, MySQL</p><p>EUSA: Servidores VMware/VirtualBox</p></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Experiencia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body class="diario">
+  <div class="diario-container">
+    <div class="pagina">
+      <h2>Experiencia Laboral</h2>
+      <h3>Técnico de Soporte de TI en AERTEC</h3>
+      <ul>
+        <li>Soporte técnico a usuarios finales, resolviendo problemas de hardware y software.</li>
+        <li>Gestión de servicios en Azure, asegurando la disponibilidad y seguridad de la infraestructura.</li>
+        <li>Administración de CATIA, actuando como Focal Point entre Reino Unido y Alemania.</li>
+        <li>Configuración y mantenimiento de WatchGuard VPN, garantizando conexiones seguras.</li>
+      </ul>
+      <h3>Administrador de Sistemas y Redes en ATG GRUPO UNICAJA</h3>
+      <ul>
+        <li>Administración de servidores y redes, incluyendo Windows Server y Ubuntu Server.</li>
+        <li>Programación en C# y gestión de bases de datos Oracle DB y MySQL.</li>
+      </ul>
+      <a href="index.html" onclick="playSonido()">Volver al menú principal</a>
+    </div>
+  </div>
+  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
+  <script>
+    function playSonido() {
+      const sonido = document.getElementById('pagina');
+      sonido.currentTime = 0;
+      sonido.play();
+    }
+  </script>
+</body>
+</html>
