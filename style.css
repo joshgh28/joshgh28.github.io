@@ -1,79 +1,53 @@
+
 body {
-  background: #1e1e1c url('fondo_refugio.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #d2cbb3;
-  font-family: 'Courier New', monospace;
   margin: 0;
   padding: 0;
+  background: url('https://i.imgur.com/0hV5LZP.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Special Elite', monospace;
+  color: #2d2d2d;
+}
+.diary {
+  background: rgba(255, 255, 230, 0.85);
+  margin: 5vh auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  border: 1px solid #555;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  position: relative;
   overflow: hidden;
 }
-
-.radio-interfaz {
-  background: rgba(30, 30, 30, 0.9);
-  border: 4px solid #4b3e30;
-  padding: 20px;
-  width: 90vw;
-  max-width: 1000px;
-  margin: 20px auto;
-  box-shadow: 0 0 30px #000;
-  position: relative;
-}
-
 .menu {
   display: flex;
   justify-content: space-around;
-  background: #3a332b;
-  padding: 10px;
-  border-bottom: 2px solid #a69b84;
+  margin-bottom: 20px;
+  font-size: 1.2em;
 }
-
-.menu li {
-  list-style: none;
-}
-
 .menu a {
-  color: #c9c9a9;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s;
+  color: #333;
 }
-
 .menu a:hover {
-  color: #ffb;
-  text-shadow: 0 0 5px #fff;
+  color: darkred;
 }
-
-h2 {
-  color: #ffc66d;
-  border-bottom: 1px dashed #444;
-  padding-bottom: 5px;
+.pagina {
+  animation: turnPage 1s ease-in-out;
 }
-
-.spores {
-  position: fixed;
+@keyframes turnPage {
+  from { transform: rotateY(-90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+.esporas {
+  position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none;
-  z-index: 1;
+  background: url('https://i.imgur.com/2x2WxPl.png') repeat;
+  animation: floatSpores 10s infinite linear;
+  opacity: 0.15;
 }
-
-.spore {
-  width: 5px;
-  height: 5px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 50%;
-  position: absolute;
-  animation: floatUp linear infinite;
+@keyframes floatSpores {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
 }
-
-@keyframes floatUp {
-  from {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(-10vh);
-    opacity: 1;
-  }
-}
-
