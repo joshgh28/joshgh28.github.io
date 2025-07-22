@@ -2,37 +2,42 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('https://i.imgur.com/0hV5LZP.jpg') no-repeat center center fixed;
+  background: url('https://i.imgur.com/LkQ6Ihw.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Special Elite', monospace;
-  color: #2d2d2d;
+  color: #2b2b2b;
 }
 .diary {
-  background: rgba(255, 255, 230, 0.85);
-  margin: 5vh auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 800px;
-  border: 1px solid #555;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  background: rgba(240, 235, 210, 0.92);
+  margin: 4vh auto;
+  padding: 40px;
+  width: 85%;
+  max-width: 900px;
+  border: 4px solid #5e4b3c;
+  box-shadow: 0 0 40px rgba(0,0,0,0.7);
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 .menu {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
-  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-size: 1.4em;
+  background: #2f2f2f;
+  padding: 10px;
+  border-radius: 5px;
 }
 .menu a {
   text-decoration: none;
-  color: #333;
+  color: #f3f3f3;
+  transition: color 0.3s ease;
 }
 .menu a:hover {
-  color: darkred;
+  color: #c0b283;
 }
 .pagina {
-  animation: turnPage 1s ease-in-out;
+  animation: turnPage 0.7s ease-in-out;
 }
 @keyframes turnPage {
   from { transform: rotateY(-90deg); opacity: 0; }
@@ -43,11 +48,11 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none;
-  background: url('https://i.imgur.com/2x2WxPl.png') repeat;
-  animation: floatSpores 10s infinite linear;
-  opacity: 0.15;
+  background: url('https://i.imgur.com/8NwhSaj.png') repeat;
+  animation: floatSpores 50s infinite linear;
+  opacity: 0.08;
 }
 @keyframes floatSpores {
   from { background-position: 0 0; }
-  to { background-position: 1000px 1000px; }
+  to { background-position: 2000px 2000px; }
 }
