@@ -1,59 +1,120 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 body {
-  font-family: 'Special Elite', monospace;
-  background: url('diario-bg.jpg') center/cover no-repeat;
-  color: #f4f4f4;
   margin: 0;
   padding: 0;
+  background: url('diario-bg.jpg') center center no-repeat;
+  background-size: cover;
+  font-family: 'Special Elite', monospace;
+  color: #e7e2d1;
+  overflow: hidden;
 }
-.cover-screen {
-  background: black;
+
+.diary-container {
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(30, 25, 20, 0.9);
+  box-shadow: 0 0 50px rgba(0,0,0,0.6);
+  border: 5px solid #3a2d1b;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 80px;
+  height: 100%;
+  animation: fadeIn 1.3s ease;
 }
-.diario-cerrado {
-  width: 50%;
-  max-width: 600px;
+
+.page h1, .page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px black;
 }
-#abrirDiario {
-  padding: 12px 28px;
-  background-color: #444;
-  color: white;
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-#indice {
-  padding: 30px;
-  animation: abrirPagina 2s ease-in-out;
-}
-.menu {
+
+.page ul {
   list-style: none;
   padding: 0;
 }
-.menu li {
-  margin: 18px 0;
+
+.page ul li {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
 }
-.menu a {
-  color: #fff;
-  font-size: 1.4em;
+
+.page a {
+  color: #c2f5c2;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
-.hidden {
-  display: none;
+
+.page a:hover {
+  color: #ffe498;
 }
-.pagina {
-  background: url('diario-bg.jpg') center/cover no-repeat;
-  padding: 40px;
-  font-size: 1.2em;
+
+button {
+  background-color: #403d33;
+  border: none;
+  padding: 1rem 2rem;
+  color: #fff3ce;
+  font-family: 'Special Elite', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
-.volver {
+
+button:hover {
+  background-color: #5a533f;
+}
+
+.page-content {
+  padding: 2rem;
+  animation: pageTurn 1.2s ease;
+}
+
+.back {
   display: block;
-  margin-top: 30px;
-  color: #ccc;
-  text-decoration: none;
+  margin-top: 2rem;
+  font-size: 1.1rem;
 }
-@keyframes abrirPagina {
-  from { opacity: 0; transform: rotateY(-90deg); }
-  to { opacity: 1; transform: rotateY(0); }
+
+/* Animaciones */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
 }
+
+@keyframes pageTurn {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0deg); opacity: 1; }
+}
+
+/* Esporas flotando */
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  background: url('spores.gif') repeat;
+  opacity: 0.15;
+  animation: floatSpores 60s linear infinite;
+}
+
+@keyframes floatSpores {
+  from { background-position: 0 0; }
+  to { background-position: -1000px 1000px; }
+}
+

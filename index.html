@@ -1,25 +1,33 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Diario de José Manuel González</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diario de JOSÉ MANUEL GONZÁLEZ</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <link rel="preload" href="flip.mp3" as="audio" />
 </head>
-<body class="cover-screen">
-  <div id="cover">
-    <img src="diario-cerrado.jpg" alt="Diario cerrado" class="diario-cerrado" />
-    <button id="abrirDiario">Abrir Diario</button>
+<body>
+  <div class="diary-container">
+    <div class="page cover">
+      <h1>Diario Postapocalíptico</h1>
+      <p>de <strong>JOSÉ MANUEL GONZÁLEZ</strong></p>
+      <button onclick="openDiary()">Abrir Diario</button>
+    </div>
+    
+    <div class="page menu" id="menuPage">
+      <h2>Capítulos</h2>
+      <ul class="menu-list">
+        <li><a href="educacion.html" onclick="playSound()">📘 Educación</a></li>
+        <li><a href="experiencia.html" onclick="playSound()">📙 Experiencia</a></li>
+        <li><a href="habilidades.html" onclick="playSound()">📗 Habilidades</a></li>
+        <li><a href="certificaciones.html" onclick="playSound()">📕 Certificaciones</a></li>
+        <li><a href="contacto.html" onclick="playSound()">📓 Contacto</a></li>
+      </ul>
+    </div>
   </div>
-  <div id="indice" class="hidden">
-    <h1>Índice del Diario</h1>
-    <ul class="menu">
-      <li><a href="formacion.html">📚 Formación</a></li>
-      <li><a href="habilidades.html">🛠️ Habilidades</a></li>
-      <li><a href="experiencia.html">🏢 Experiencia</a></li>
-      <li><a href="certificados.html">🎓 Certificaciones</a></li>
-      <li><a href="contacto.html">📬 Contacto</a></li>
-    </ul>
-  </div>
+  <audio id="flipSound" src="flip.mp3"></audio>
+  <script src="theme.js"></script>
 </body>
 </html>
