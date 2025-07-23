@@ -1,84 +1,89 @@
 body {
   margin: 0;
-  background: url('diario-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Special Elite', monospace;
-  color: #e0e0d1;
+  background: #1a120b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   overflow: hidden;
+  font-family: 'Special Elite', monospace;
+}
+
+.diary-container {
+  width: 80%;
+  max-width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .diary {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(2px);
   position: relative;
+  width: 60%;
+  height: 80%;
+  perspective: 1500px;
+  background: #3a2c1a;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.tabs {
-  width: 180px;
-  background: rgba(20, 20, 20, 0.85);
-  padding: 1rem;
-  border-right: 3px solid #333;
+.diary-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  z-index: 10;
 }
 
-.tabs button {
-  background: #222;
-  color: #cfc;
-  border: 1px solid #555;
-  font-family: 'Special Elite', monospace;
-  font-size: 1rem;
-  padding: 0.8rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.tabs button:hover {
-  background: #3a3a3a;
-  transform: scale(1.05);
+.diary-cover h1 {
+  color: #d4a373;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .pages {
-  flex-grow: 1;
-  background: rgba(5, 5, 5, 0.75);
-  padding: 2rem;
-  overflow-y: auto;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f5f5dc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
   display: none;
-  animation: flipIn 0.7s forwards;
+  transform-origin: left center;
+  transition: transform 1s;
 }
 
 .page.active {
   display: block;
 }
 
-@keyframes flipIn {
-  from {
-    transform: rotateY(90deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotateY(0);
-    opacity: 1;
-  }
+.page h2 {
+  color: #5a3921;
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 
-/* Esporas */
-.spores {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background: url('spores.gif') center center repeat;
-  mix-blend-mode: screen;
-  opacity: 0.15;
-  z-index: 99;
+.page p, .page ul {
+  color: #5a3921;
+  font-size: 1rem;
+}
+
+.page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page li {
+  margin-bottom: 0.5rem;
 }
