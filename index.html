@@ -1,33 +1,144 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diario de JOSÉ MANUEL GONZÁLEZ</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preload" href="flip.mp3" as="audio" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Supervivencia - José Manuel González</title>
+    <meta name="description" content="Portfolio post-apocalíptico de José Manuel González - Especialista en Soporte TI y Redes en un mundo devastado">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="diary-container">
-    <div class="page cover">
-      <h1>Diario Postapocalíptico</h1>
-      <p>de <strong>JOSÉ MANUEL GONZÁLEZ</strong></p>
-      <button onclick="openDiary()">Abrir Diario</button>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h1 class="loading-title">CARGANDO DIARIO...</h1>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+            <p class="loading-subtitle">"Recuperando memorias del pasado..."</p>
+        </div>
     </div>
-    
-    <div class="page menu" id="menuPage">
-      <h2>Capítulos</h2>
-      <ul class="menu-list">
-        <li><a href="educacion.html" onclick="playSound()">📘 Educación</a></li>
-        <li><a href="experiencia.html" onclick="playSound()">📙 Experiencia</a></li>
-        <li><a href="habilidades.html" onclick="playSound()">📗 Habilidades</a></li>
-        <li><a href="certificaciones.html" onclick="playSound()">📕 Certificaciones</a></li>
-        <li><a href="contacto.html" onclick="playSound()">📓 Contacto</a></li>
-      </ul>
+
+    <!-- Spore Background -->
+    <div id="spore-container" class="spore-container"></div>
+
+    <!-- Post-apocalyptic Background -->
+    <div class="post-apocalyptic-bg"></div>
+
+    <!-- Main Diary Container -->
+    <div id="diary-container" class="diary-container" style="display: none;">
+        <div class="diary-wrapper">
+            <!-- Stains and Damage Effects -->
+            <div class="stain stain-1"></div>
+            <div class="stain stain-2"></div>
+            
+            <!-- Diary Pages -->
+            <div class="diary-pages">
+                <!-- Left Page - Title -->
+                <div class="diary-page left-page">
+                    <div class="torn-corner"></div>
+                    
+                    <h1 class="diary-title">DIARIO DE SUPERVIVENCIA</h1>
+                    
+                    <div class="title-divider">
+                        <div class="divider-line"></div>
+                        <p class="diary-quote">
+                            "En este mundo infectado,<br />
+                            solo quedan los recuerdos<br />
+                            y las habilidades..."
+                        </p>
+                        <div class="divider-line"></div>
+                    </div>
+                    
+                    <!-- Profile Info -->
+                    <div class="profile-info">
+                        <h2 class="profile-title">PROPIETARIO</h2>
+                        <div class="profile-details">
+                            <p><span class="label">Nombre:</span> José Manuel González</p>
+                            <p><span class="label">Ubicación:</span> Málaga, España</p>
+                            <p><span class="label">Estado:</span> Superviviente</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Warning Box -->
+                    <div class="warning-box">
+                        <p class="warning-text">
+                            ⚠️ ADVERTENCIA ⚠️<br />
+                            Si encuentras este diario,<br />
+                            usa la información sabiamente
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Page - Index -->
+                <div class="diary-page right-page">
+                    <h2 class="index-title">ÍNDICE DE SUPERVIVENCIA</h2>
+                    
+                    <!-- Chapter Links -->
+                    <nav class="chapter-navigation">
+                        <a href="contacto.html" class="chapter-link" data-chapter="contacto">
+                            <div class="chapter-content">
+                                <span class="chapter-title">01. CONTACTO & COMUNICACIÓN</span>
+                                <span class="chapter-arrow">→</span>
+                            </div>
+                            <p class="chapter-description">Información para establecer contacto</p>
+                        </a>
+                        
+                        <a href="educacion.html" class="chapter-link" data-chapter="educacion">
+                            <div class="chapter-content">
+                                <span class="chapter-title">02. CONOCIMIENTOS ADQUIRIDOS</span>
+                                <span class="chapter-arrow">→</span>
+                            </div>
+                            <p class="chapter-description">Formación y educación</p>
+                        </a>
+                        
+                        <a href="experiencia.html" class="chapter-link" data-chapter="experiencia">
+                            <div class="chapter-content">
+                                <span class="chapter-title">03. EXPERIENCIAS DE CAMPO</span>
+                                <span class="chapter-arrow">→</span>
+                            </div>
+                            <p class="chapter-description">Trabajos y misiones realizadas</p>
+                        </a>
+                        
+                        <a href="habilidades.html" class="chapter-link" data-chapter="habilidades">
+                            <div class="chapter-content">
+                                <span class="chapter-title">04. HABILIDADES TÉCNICAS</span>
+                                <span class="chapter-arrow">→</span>
+                            </div>
+                            <p class="chapter-description">Destrezas y competencias</p>
+                        </a>
+                        
+                        <a href="certificaciones.html" class="chapter-link" data-chapter="certificaciones">
+                            <div class="chapter-content">
+                                <span class="chapter-title">05. CREDENCIALES</span>
+                                <span class="chapter-arrow">→</span>
+                            </div>
+                            <p class="chapter-description">Certificaciones obtenidas</p>
+                        </a>
+                    </nav>
+                    
+                    <!-- Footer Note -->
+                    <div class="footer-note">
+                        <p class="footer-text">
+                            "Cada página contiene secretos de supervivencia<br />
+                            en el mundo de la tecnología post-apocalíptica"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Binding holes -->
+            <div class="binding-hole" style="top: 60px;"></div>
+            <div class="binding-hole" style="top: 120px;"></div>
+            <div class="binding-hole" style="bottom: 120px;"></div>
+            <div class="binding-hole" style="bottom: 60px;"></div>
+        </div>
     </div>
-  </div>
-  <audio id="flipSound" src="flip.mp3"></audio>
-  <script src="theme.js"></script>
+
+    <script src="particles.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
