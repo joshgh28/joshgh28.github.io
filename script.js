@@ -1,27 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const pages = document.querySelectorAll('.page');
-  let currentPage = 0;
 
-  function showPage(index) {
-    pages.forEach((page, i) => {
-      if (i === index) {
-        page.classList.add('active');
-      } else {
-        page.classList.remove('active');
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("abrirDiario");
+  const cover = document.getElementById("cover");
+  const indice = document.getElementById("indice");
+
+  if (btn) {
+    btn.addEventListener("click", () => {
+      cover.classList.add("hidden");
+      indice.classList.remove("hidden");
     });
   }
-
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'ArrowRight') {
-      currentPage = (currentPage + 1) % pages.length;
-      showPage(currentPage);
-    } else if (event.key === 'ArrowLeft') {
-      currentPage = (currentPage - 1 + pages.length) % pages.length;
-      showPage(currentPage);
-    }
-  });
-
-  showPage(currentPage);
 });
-

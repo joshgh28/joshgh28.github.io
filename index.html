@@ -1,57 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diario de Supervivencia</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Diario de José Manuel González</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="diary-container">
-    <div class="diary">
-      <div class="diary-cover">
-        <h1>Diario de José Manuel</h1>
-      </div>
-      <div class="pages">
-        <div class="page active" id="cover">
-          <h2>Contacto</h2>
-          <p>Email: josegonh28@hotmail.com</p>
-          <p>LinkedIn: www.linkedin.com/in/josegonzálezhidalgo</p>
-          <p>Ubicación: Málaga, España</p>
-        </div>
-        <div class="page" id="page1">
-          <h2>Educación</h2>
-          <p>📚 Grado Superior en Administración de Sistemas Informáticos y Redes</p>
-          <p>💻 Grado Medio en Sistemas Microinformáticos y Redes</p>
-        </div>
-        <div class="page" id="page2">
-          <h2>Experiencia</h2>
-          <p><strong>AERTEC</strong> – Técnico de soporte de TI</p>
-          <ul>
-            <li>Soporte técnico a usuarios finales</li>
-            <li>Gestión de servicios en Azure</li>
-            <li>Administración de CATIA</li>
-            <li>Configuración de VPN WatchGuard</li>
-          </ul>
-        </div>
-        <div class="page" id="page3">
-          <h2>Habilidades</h2>
-          <p>🖥️ Windows Server, Ubuntu, Azure</p>
-          <p>📂 MySQL, Oracle, MariaDB, MongoDB</p>
-          <p>🧠 C#, Visual Studio</p>
-          <p>🛡️ Proxmox, VMware, VirtualBox</p>
-          <p>🧰 CATIA, WatchGuard VPN</p>
-          <p>🌐 HTML, CSS</p>
-        </div>
-        <div class="page" id="page4">
-          <h2>Certificaciones</h2>
-          <p>✅ Certificado de soporte TI de Google</p>
-        </div>
-      </div>
-    </div>
+<body class="cover-screen">
+  <div id="cover">
+    <img src="diario-cerrado.jpg" alt="Diario cerrado" class="diario-cerrado" />
+    <button id="abrirDiario">Abrir Diario</button>
   </div>
-  <script src="script.js"></script>
+  <div id="indice" class="hidden">
+    <h1>Índice del Diario</h1>
+    <ul class="menu">
+      <li><a href="formacion.html">📚 Formación</a></li>
+      <li><a href="habilidades.html">🛠️ Habilidades</a></li>
+      <li><a href="experiencia.html">🏢 Experiencia</a></li>
+      <li><a href="certificados.html">🎓 Certificaciones</a></li>
+      <li><a href="contacto.html">📬 Contacto</a></li>
+    </ul>
+  </div>
 </body>
 </html>
