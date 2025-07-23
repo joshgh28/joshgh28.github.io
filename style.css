@@ -629,132 +629,14 @@ body {
     }
 }
 
-/* Estilo general post-apocalíptico */
-body {
-  background: #111 url('diario-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Courier New', Courier, monospace;
-  color: #b8f1b0;
-  text-shadow: 0 0 2px #0f0;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+/* Mejoras de contraste y legibilidad */
+body, p, h1, h2, h3, h4, h5, h6, a, span, li {
+    color: #f2f2f2 !important;
+    text-shadow: 1px 1px 2px #000;
 }
 
-/* Efecto CRT */
-.crt::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 255, 0, 0.03),
-    rgba(0, 255, 0, 0.03) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  z-index: 999;
-  pointer-events: none;
-}
-
-/* Diario visual */
-.diario {
-  background: rgba(26, 26, 26, 0.85);
-  border: 5px solid #3b3b3b;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-  padding: 30px;
-  max-width: 900px;
-  margin: 80px auto;
-  position: relative;
-  animation: entradaDiario 1.2s ease-out forwards;
-}
-
-/* Animación al abrir diario */
-@keyframes entradaDiario {
-  0% {
-    transform: scale(0.8) rotate(-2deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotate(0);
-    opacity: 1;
-  }
-}
-/* Esporas animadas */
-#esporas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.espora {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-  animation: flotar 8s infinite ease-in-out;
-}
-
-@keyframes flotar {
-  0% {
-    transform: translateY(0) scale(0.5);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-50vh) scale(1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(0) scale(0.5);
-    opacity: 0.3;
-  }
-}
-
-/* Títulos como escritura de diario */
-h1, h2, h3 {
-  font-family: 'Special Elite', 'Courier New', monospace;
-  color: #ddffcc;
-  border-bottom: 1px dashed #55ff99;
-  padding-bottom: 5px;
-  margin-top: 40px;
-}
-
-/* Botones de navegación estilo pestaña de diario */
-.tab-button {
-  background-color: #1a1a1a;
-  border: 2px solid #55ff99;
-  color: #ddffcc;
-  padding: 12px 24px;
-  margin: 10px 5px;
-  cursor: pointer;
-  font-size: 16px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  box-shadow: inset 0 0 5px #55ff99;
-  transition: background-color 0.3s ease;
-}
-
-.tab-button:hover {
-  background-color: #2a2a2a;
-}
-
-/* Enlaces con glow */
-a {
-  color: #88ffaa;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 6px #00ffcc;
+section, article, .content, .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
 }
