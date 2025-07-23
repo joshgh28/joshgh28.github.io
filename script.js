@@ -6,10 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     pages.forEach((page, i) => {
       if (i === index) {
         page.classList.add('active');
-        page.style.transform = 'rotateY(0deg)';
       } else {
         page.classList.remove('active');
-        page.style.transform = 'rotateY(90deg)';
       }
     });
   }
@@ -26,3 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   showPage(currentPage);
 });
+

@@ -10,32 +10,30 @@ body {
 }
 
 .diary-container {
-  width: 80%;
-  max-width: 800px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 600px;
+  height: 400px;
+  position: relative;
 }
 
 .diary {
   position: relative;
-  width: 60%;
-  height: 80%;
-  perspective: 1500px;
-  background: #3a2c1a;
-  border-radius: 5px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
 .diary-cover {
   position: absolute;
   width: 100%;
   height: 100%;
+  background: #3a2c1a;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .diary-cover h1 {
@@ -60,8 +58,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   display: none;
-  transform-origin: left center;
-  transition: transform 1s;
+  backface-visibility: hidden;
 }
 
 .page.active {
@@ -87,3 +84,4 @@ body {
 .page li {
   margin-bottom: 0.5rem;
 }
+
