@@ -1,30 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Diario de Supervivencia - Inicio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diario de Supervivencia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <script defer src="theme.js"></script>
 </head>
-<body class="diario">
-  <div class="diario-container">
-    <div class="menu-lateral">
-      <a href="index.html" class="menu-link">Inicio</a>
-      <a href="contacto.html" class="menu-link">Contacto</a>
-      <a href="educacion.html" class="menu-link">Educación</a>
-      <a href="habilidades.html" class="menu-link">Habilidades</a>
-      <a href="experiencia.html" class="menu-link">Experiencia</a>
-      <a href="certificaciones.html" class="menu-link">Certificaciones</a>
+<body>
+  <div class="diary">
+    <div class="tabs">
+      <button data-page="contacto">Contacto</button>
+      <button data-page="educacion">Educación</button>
+      <button data-page="experiencia">Experiencia</button>
+      <button data-page="habilidades">Habilidades</button>
+      <button data-page="certificaciones">Certificaciones</button>
     </div>
-    <div class="pagina">
-      <h1>Diario de José Manuel</h1>
-      <p>Soy un técnico informático especializado en sistemas y redes.</p>
-      <p>Este diario guarda mi historia profesional. Usa el menú para explorar cada apartado.</p>
+
+    <div class="pages">
+      <div class="page active" id="contacto">
+        <h1>Contacto</h1>
+        <p>Email: josegonh28@hotmail.com</p>
+        <p>LinkedIn: www.linkedin.com/in/josegonzálezhidalgo</p>
+        <p>Ubicación: Málaga, España</p>
+      </div>
+      <div class="page" id="educacion">
+        <h1>Educación</h1>
+        <p>📚 Grado Superior en Administración de Sistemas Informáticos y Redes</p>
+        <p>💻 Grado Medio en Sistemas Microinformáticos y Redes</p>
+      </div>
+      <div class="page" id="experiencia">
+        <h1>Experiencia</h1>
+        <p><strong>AERTEC</strong> – Técnico de soporte de TI</p>
+        <ul>
+          <li>Soporte técnico a usuarios finales</li>
+          <li>Gestión de servicios en Azure</li>
+          <li>Administración de CATIA</li>
+          <li>Configuración de VPN WatchGuard</li>
+        </ul>
+        <p><strong>ATG GRUPO UNICAJA</strong> – Admin de sistemas</p>
+        <ul>
+          <li>Admin de servidores/redes</li>
+          <li>Programación en C#</li>
+          <li>Bases de datos Oracle DB / MySQL</li>
+        </ul>
+        <p><strong>EUSA</strong> – Técnico en sistemas</p>
+        <ul>
+          <li>VirtualBox / VMware</li>
+          <li>Gestión de incidencias</li>
+        </ul>
+      </div>
+      <div class="page" id="habilidades">
+        <h1>Habilidades</h1>
+        <p>🖥️ Windows Server, Ubuntu, Azure</p>
+        <p>📂 MySQL, Oracle, MariaDB, MongoDB</p>
+        <p>🧠 C#, Visual Studio</p>
+        <p>🛡️ Proxmox, VMware, VirtualBox</p>
+        <p>🧰 CATIA, WatchGuard VPN</p>
+        <p>🌐 HTML, CSS</p>
+      </div>
+      <div class="page" id="certificaciones">
+        <h1>Certificaciones</h1>
+        <p>✅ Certificado de soporte TI de Google</p>
+      </div>
     </div>
   </div>
-  <div id="particles-js"></div>
-  <audio id="pagina" src="pagina.mp3" preload="auto"></audio>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="theme.js"></script>
+
+  <div class="spores"></div>
 </body>
 </html>

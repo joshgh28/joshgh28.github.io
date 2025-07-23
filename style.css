@@ -1,91 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
 body {
   margin: 0;
-  padding: 0;
+  background: url('diario-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   font-family: 'Special Elite', monospace;
-  background: #1d1c1a;
-  color: #e0d9c5;
+  color: #e0e0d1;
   overflow: hidden;
 }
 
-.diario-container {
+.diary {
   display: flex;
-  height: 100vh;
   width: 100vw;
-  background: url('diario-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  backdrop-filter: blur(2px);
   position: relative;
 }
 
-.menu-lateral {
-  background-color: rgba(24, 20, 17, 0.9);
-  border-right: 2px solid #39352f;
-  padding: 20px;
-  width: 220px;
+.tabs {
+  width: 180px;
+  background: rgba(20, 20, 20, 0.85);
+  padding: 1rem;
+  border-right: 3px solid #333;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  box-shadow: 4px 0 10px #00000066;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.menu-link {
-  color: #d6cfc3;
-  text-decoration: none;
-  font-size: 18px;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-}
-
-.menu-link::before {
-  content: "▶ ";
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.menu-link:hover::before {
-  opacity: 1;
-}
-
-.menu-link:hover {
-  color: #f3efdf;
-  transform: translateX(5px);
-}
-
-.pagina {
-  flex: 1;
-  padding: 40px;
-  overflow-y: auto;
-  background-color: rgba(33, 30, 27, 0.85);
-  backdrop-filter: blur(2px);
-  border-left: 4px double #a99e90;
-  box-shadow: inset 0 0 40px #00000055;
-  animation: pasarPagina 0.8s ease;
-}
-
-@keyframes pasarPagina {
-  from { transform: rotateY(-90deg); opacity: 0; }
-  to { transform: rotateY(0); opacity: 1; }
-}
-
-h1, h2, h3 {
+.tabs button {
+  background: #222;
+  color: #cfc;
+  border: 1px solid #555;
   font-family: 'Special Elite', monospace;
-  color: #f0ede3;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-ul, p {
-  font-size: 16px;
-  line-height: 1.6;
+.tabs button:hover {
+  background: #3a3a3a;
+  transform: scale(1.05);
 }
 
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+.pages {
+  flex-grow: 1;
+  background: rgba(5, 5, 5, 0.75);
+  padding: 2rem;
+  overflow-y: auto;
+  position: relative;
 }
 
-audio {
+.page {
   display: none;
+  animation: flipIn 0.7s forwards;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+/* Esporas */
+.spores {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: url('spores.gif') center center repeat;
+  mix-blend-mode: screen;
+  opacity: 0.15;
+  z-index: 99;
 }
