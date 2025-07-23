@@ -640,3 +640,50 @@ section, article, .content, .overlay {
     padding: 10px;
     border-radius: 5px;
 }
+/* === ESTILO DE SCROLL PERSONALIZADO OSCURO === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #2c1f1b;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #5c4436;
+    border-radius: 10px;
+}
+
+/* === TRANSICIONES SUAVES === */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* === EFECTO GLITCH EN TITULOS === */
+h1:hover, h2:hover {
+    animation: glitch 0.4s linear infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 1px 0 red, -1px 0 blue; }
+    20% { text-shadow: -2px 0 red, 2px 0 blue; }
+    40% { text-shadow: 2px 0 red, -2px 0 blue; }
+    60% { text-shadow: -1px 0 red, 1px 0 blue; }
+    80% { text-shadow: 1px 0 red, -1px 0 blue; }
+    100% { text-shadow: 0 0 red, 0 0 blue; }
+}
+
+/* === NIEBLA DE FONDO === */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: url('fog-overlay.gif') repeat;
+    opacity: 0.08;
+    z-index: 1;
+    pointer-events: none;
+}
+
+body {
+    position: relative;
+    z-index: 2;
+}
