@@ -702,7 +702,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -10;
-  filter: brightness(0.6) contrast(1.1) saturate(0.9);
+  filter: brightness(0.5) contrast(1.1) saturate(0.9);
 }
 
 
