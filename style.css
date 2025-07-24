@@ -200,19 +200,6 @@ body {
 .right-page {
     padding-left: 3rem;
 }
-
-/* Torn Corner Effect */
-.torn-corner {
-    position: absolute;
-    top: -4px;
-    right: calc(50% - 2rem);
-    width: 20px;
-    height: 20px;
-    background: var(--diary-amber-light);
-    transform: rotate(45deg);
-    z-index: -1;
-}
-
 /* Left Page Styles */
 .diary-title {
     font-family: 'Special Elite', monospace;
